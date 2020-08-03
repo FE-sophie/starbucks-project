@@ -1,0 +1,171 @@
+@import url("https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css");
+*,*::before,*::after{
+  font-family: 'Roboto', sans-serif;
+}
+html{
+  font-size: 10px;
+}
+body { font-family: 'NanumBarunGothic', sans-serif; }
+a{
+  color: inherit;
+  text-decoration: none;
+}
+.a11y-hidden, legend {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  /* IE 6,7 */ 
+  clip: rect(0,0,0,0); 
+  width: 1px; height: 1px; 
+  margin: -1px; 
+  border: 0; 
+  padding: 0; 
+}
+.clearfix::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.container {
+  background-color: #f6f5ef;
+  border-top: 2px solid #000;
+}
+/* 헤더영역 */
+.header {
+}
+.inner {
+  width: 1100px;
+  margin: 0 auto;
+  text-align: right;
+  position: relative;
+}
+.logo {
+  float: left;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+/* 멤버링크 */
+.member-links {
+  padding: 10px;
+  display: inline-block;
+  text-align: right;
+  font-size: 1.2rem;
+}
+.member-links__item>span {
+  color: #eee;
+  margin: 10px;
+}
+.member-links__item{
+  display: inline-block;
+}
+/* 검색폼 */
+.total-search {
+  display: inline-block;
+  vertical-align: middle;
+}
+.total-search__btn {
+  background-image: url(./images/icon_magnifier_black.png);
+  background-repeat: no-repeat;
+  background-position: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-indent: 2em;
+  width: 30px;
+  height: 30px;
+}
+.total-search__btn--initial {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  border: 1px solid #666;
+  border-radius: 5px;
+  margin: 0;
+}
+.total-search__btn--act {
+  border: 0;
+  background-color: transparent;
+}
+.total-search__form{
+  text-align: right;
+  display: inline-block;
+  display: hidden;
+  font-size: 0;
+  border: 1px solid #666;
+  border-radius: 10px;
+}
+.total-search__input {
+  padding: 5px;
+  font-size: 1.4rem;
+  border: 0;
+}
+/* 네비게이션 메뉴 */
+.nav__main-menu {
+  text-align: right;
+  font-size: 0;
+}
+.nav__main-item {
+  display: inline-block;
+  padding: 20px 18px 38px 18px;
+  font-size: 1.4rem;
+}
+.nav__main-item:hover {
+  background: black;
+  color: #00B050;
+  text-decoration: underline;
+  cursor: pointer;
+}
+/* 전체 메뉴 패널 */
+.main-menu-panel {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  position: absolute;
+}
+.main-menu-panel__list {
+  width: 1100px;
+  margin: 0 auto;
+  padding: 10px 30px;
+}
+.main-menu-panel__item, .side-more-info{
+  display: none;
+}
+.main-menu-panel__item--active, .side-more-info--active {
+  display: flex;
+  flex-flow: row wrap;
+}
+.main-menu-panel__wrapper {
+  display: block;
+  width: 20%;
+  padding: 20px 0;
+}
+.main-menu-panel__heading {
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 10px 0;
+}
+.main-menu-panel__inner-list {
+  font-size: 1.2rem;
+  margin-bottom: 10px 0;
+}
+.main-menu-panel__inner-item {
+  padding: 5px 0;
+  color:#999;
+  
+}
+.side-more-info__list{
+  background-image: url(https://www.starbucks.co.kr/common/img/common/gnb_sub_txbg.jpg);
+  display: block;
+  width: 1100px;
+  margin: 10px 0;
+  padding: 20px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.8rem;
+}
+.side-more-info__title {
+  color: #999;
+  margin-top: 10px;
+}
+.side-more-info__description {
+  color: #64a70b;
+}

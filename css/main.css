@@ -393,6 +393,13 @@ a{
   text-decoration: underline;
   color:#fff;
 }
+.global-widget{
+  width:141px;
+  height:252px;
+  top:150px;
+  right:90px;
+  position:fixed;
+}
 /* 푸터 */
 .footer{
   background-color: skyblue;

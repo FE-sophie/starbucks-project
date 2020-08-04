@@ -41,9 +41,8 @@ a{
 }
 /* 해더 로고 */
 .logo{
-  /* background-color: blue; */
-  position: absolute;
-  top: 25px;
+  margin-top: 13px;
+  float: left;
 }
 .logo__img img{
   width: 75px;
@@ -122,7 +121,6 @@ a{
 /* 메인메뉴 패널 */
 .main-menu-panel{
   width: 100%;
-  position: absolute;
   /* display: block; */
 }
 .act11 .main-menu-panel__item{
@@ -140,6 +138,12 @@ a{
 }
 .main-menu-panel__wrapper{
   width: 20%;
+  float: left;
+}
+.main-menu-panel__wrapper:last-child{
+  clear: both;
+  display: block;
+  content: '';
 }
 .main-menu-panel__heading{
   color: #fff;
@@ -162,7 +166,7 @@ a{
 .side-more-info__list{
   width: 1100px;
   margin: auto;
-  padding: 40px 0;
+  padding: 30px 0 20px 0;
   font-size: 1.2rem;
 }
 .side-more-info__title{

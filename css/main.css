@@ -28,6 +28,8 @@ a{
 /* 해더 */
 .header{
   background-color: #f6f5ef;
+  position: fixed;
+  width: 100%;
 }
 .header__inner{
   /* background-color: pink; */
@@ -170,6 +172,7 @@ a{
 /* 메인 */
 .main{
   background-color: tomato;
+  height: 3000px;
 }
 /* 푸터 */
 .footer{

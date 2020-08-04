@@ -11,7 +11,7 @@ a{
   text-decoration: none;
 }
 .a11y-hidden, legend {
-  overflow: hidden;
+  overflow: hidden; 
   position: absolute;
   clip: rect(0 0 0 0);
   /* IE 6,7 */ 

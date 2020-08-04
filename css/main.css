@@ -186,6 +186,78 @@ a{
   margin-bottom: 20px;
 }
 /* 메인 */
+/* 공지사항 */
+.noti-pro-wrapper{
+  width: 100%;
+  font-size: 0;
+}
+.notice{
+  display: inline-block;
+  background-color: #181818;
+  width: 50%;
+  height: 64px;
+  padding: 0 13px;
+  color: #fff;
+  text-align: right;
+  margin-right: -4px;
+}
+.notice-heading{
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: -1px;
+  font-size: 1.7rem;
+  vertical-align: middle;
+}
+.notice-list{
+  display: inline-block;
+  font-size: 1.5rem;
+  width: 450px;
+  text-align: left;
+  vertical-align: middle;
+}
+.notice-more{
+  display: inline-block;
+  height: 64px;
+  line-height: 64px;
+  vertical-align: middle;
+}
+.notice-more img{
+  width: 36px;
+  height: 36px;
+  vertical-align: middle;
+}
+/* 스타벅스 프로모션 */
+.promotion{
+  display: inline-block;
+  text-align: center;
+  width: 50%;
+  height: 64px;
+  line-height: 64px;
+  background-color: #f6f5ef;
+  vertical-align: middle;
+}
+.promotion__heading{
+  display: inline-block;
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-right: 60px;
+  height: 64px;
+  line-height: 64px;
+}
+.promotion__dropdown{
+  display: inline-block;
+  border: none;
+  padding: 0;
+  height: 64px;
+  line-height: 64px;
+  background-color: transparent;
+  vertical-align: top;
+}
+.promotion__dropdown img{
+  width: 35px;
+  height: 35px;
+  vertical-align: middle;
+}
 /* 리워드 */
 .rewards{
   background: linear-gradient(90deg,#272727 49%, #d5c799 50%);
@@ -250,6 +322,7 @@ a{
 .new-arrival{
   background-color: #c3d2d9;
   position: relative;
+  overflow: hidden;
 }
 .new-arrival__wrapper{
   padding-top: 70px;

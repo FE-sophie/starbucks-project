@@ -115,7 +115,7 @@ a{
 .main-menu-panel{
   width: 100%;
   position: absolute;
-  display: block;
+  /* display: block; */
 }
 .act11 .main-menu-panel__item{
   display: none;
@@ -124,11 +124,11 @@ a{
   background-color: #2c2a29;
 }
 .main-menu-panel__inner{
-  display: flex;
   width: 1100px;
-  flex-flow: row wrap;
   margin: auto;
   padding-bottom:20px;
+  display: flex;
+  flex-flow: row wrap;
 }
 .main-menu-panel__wrapper{
   width: 20%;
@@ -137,12 +137,12 @@ a{
   color: #fff;
   font-size: 1.4rem;
   padding-top: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 .main-menu-panel__inner-item{
   color: #999;
   font-size: 1.2rem;
-  padding: 5px 0;
+  padding: 3px 0;
 }
 /* 메인메뉴 추가정보 */
 .side-more-info{

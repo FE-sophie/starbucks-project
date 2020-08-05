@@ -210,10 +210,13 @@ a{
 }
 .notice-list{
   display: inline-block;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   width: 450px;
   text-align: left;
   vertical-align: middle;
+}
+.notice-item:hover{
+  text-decoration: underline;
 }
 .notice-more{
   display: inline-block;
@@ -252,6 +255,7 @@ a{
   line-height: 64px;
   background-color: transparent;
   vertical-align: top;
+  cursor: pointer;
 }
 .promotion__dropdown img{
   width: 35px;
@@ -319,6 +323,7 @@ a{
   background-color: #000;
   text-decoration: underline;
 }
+/* 여름 원두 */
 /* 서머 프로모션 원두 */
 .summer-bean {
   background-color: violet;
@@ -326,56 +331,77 @@ a{
   background-size: cover;
   margin: 0 auto;
   padding: 10px;
-  height: 573px;
 }
 .summer-bean-wrapper {
   margin: 0 auto;
   height: 573px;
-  width: 900px;
+  width: 950px;
   position: relative;
 }
 .summer-bean-figure {
   position: absolute;
-  margin-left: 30px;
   top: 65px;
+  left: 30px;
+  animation: move 1.5s ease-in-out normal forwards;
+}
+/* 키프레임 */
+@keyframes move {
+  0% {
+    transform: translateX(-1000px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes movemove{
+  0% {
+    transform: translateX(1000px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 .summer-bean-info {
   max-width: 600px;
   display: flex;
   flex-flow: column nowrap;
   position: absolute;
-  top: 160px;
-  right: 0;
+  top: 150px;
+  right: 10px;
+  animation: movemove 1.5s ease-in-out normal forwards;
 }
 .summer-bean-title {
-  color: #dbebf8;
-  font-size: 4rem;
+  color: #b9e0c6;
+  font-size: 3.5rem;
   font-weight: 700;
   margin-top: 5px;
   margin-bottom: 20px;
 }
 .summer-bean-description {
   order: -1;
-  color: #dbebf8;
-  font-size: 2rem;
+  color: #b9e0c6;
+  font-size: 1.9rem;
+  font-weight: 700;
   margin-bottom: 5px;
 }
 .summer-bean-detail {
   color: #fff;
   margin: 10px 0;
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: 2.8rem;
   margin-bottom: 20px;
 }
 .summer-bean-more {
   display: inline-block;
   border: 2px solid white;
+  border-radius: 3px;
   color: #fff;
-  font-size: 2rem;
-  padding: 10px;
+  font-size: 1.4rem;
+  padding: 10px 25px;
   position: absolute;
-  top: 380px;
-  left: 355px;
+  top: 375px;
+  left: 430px;
+  animation: movemove 1.5s ease-in-out normal forwards;
 }
 /* 신상품 */
 .new-arrival{
@@ -412,38 +438,39 @@ a{
   top: 270px;
   left: 180px;
 }
-@keyframes new-arrival--opacity{
+/* @keyframes new-arrival--opacity{
   0%{
     opacity: 0;
   }
   100%{
     opacity: 1;
   }
-}
+} */
 .new-arrival__bgi{
   position: absolute;
   bottom: 0;
-  right: -200px;
+  left:700px;
   opacity: 0;
   animation: new-arrival--opacity 2s ease-in-out forwards;
 }
 /* 전체 상품 */
 .all-products{
-  background:url(../images/fav_prod_bg_new.jpg) no-repeat;
+  background:url(../images/fav_prod_bg_new.jpg);
   background-size: cover;
   background-attachment: fixed;
-  background-position-x: -200px;
-  padding:100px 0;
+  background-position: center;
+  padding:110px 0;
   width:100%;
+  overflow: hidden;
 }
 .all-products__inner-wrapper{
   width:1200px;
   margin:0 auto;
-  padding:0 40px;
+  /* padding:0 20px; */
 }
 .all-products__inner{
   text-align: right;
-  width:35%;
+  width:500px;
   float: left;
   color:#fff;
   position: relative;
@@ -463,12 +490,15 @@ a{
   line-height:2rem;
   animation:recommendAni1 2s;
 }
+
 .all-products-heading em:nth-child(2)::before{
   content: "";
-display: block;
+  display: block;
 }
 .all-products-slogun{
+  font-family: 'Maven Pro', sans-serif;
   position: absolute;
+  font-weight: 500;
   top:0;
   right:0;
   animation:recommendAni1 3s;
@@ -489,8 +519,8 @@ display: block;
 }
 .all-products-more{
   display: inline-block;
-  padding:10px 30px;
-  margin:50px 0;
+  padding:10px 27px;
+  margin:40px 0;
   font-size:1.4rem;
   border:2px solid #fff;
   color:#fff;
@@ -505,18 +535,20 @@ display: block;
 }
 .all-products-img{
   text-align: right;
-  margin-top:-30px;
-  margin-left:120px;
+  margin-top:-40px;
+  padding-right:30px;
+  /* margin-left:20px; */
   width:100%;
 }
 .all-products-img img{
-  max-width: 100%;
+  max-width: 50%;
 }
 /* 매거진 */
 .magazine{
   width:1200px;
   position: relative;
   margin:0 auto;
+  overflow:hidden;
 }
 .magazine__inner-wrapper::before{
   content: "";
@@ -563,25 +595,22 @@ display: block;
 .magazine-heading{
   background: url(../images/reserve_text_pc1.png) no-repeat;
   background-position:left;
-  background-size:100%;
-  /* width:100%; */
+  background-size:100% auto;
   width:500px;
-  height:0;
+  height:100px;
   margin-top:180px;
-  padding-top:60px;
+  text-indent: 9999px;
   white-space: nowrap;
   overflow: hidden;
-  
 }
 .magazine-suggestion{
   font-size:1.4rem;
   padding:20px 0;
-  color:#555; 
-  
+  color:#555;
+  margin-top:-2px 
   }
-
 .magazine-more{
-  margin-top:65px;
+  margin-top:35px;
   font-size:1.8rem;
   letter-spacing:0.6em ;
   animation:all 3s;
@@ -592,7 +621,6 @@ display: block;
   animation: magazineAni1 3s;
   background-color: #fff;
   transition: background-color 1000ms;
-
 }
 .magazine-more:hover{
   background-color:#976d3f;
@@ -836,50 +864,56 @@ display: block;
   position:fixed;
 }
 /* 푸터 */
+/* 푸터 */
 .footer{
-  background-color: #000;
+  background-color: #2C2A29;
   padding: 30px 0;
   text-align: center;
 }
-.footer-wraper {
+.footer-nav, .company-info, .award-list {
   width: 1100px;
   margin: 0 auto;
+  display: inline-block;
+  text-align: center;
+  font-size: 0;
+}
+.footer-nav__heading:hover, .footer-nav__inner-item:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+.footer-nav {
+  background-image: url(https://www.starbucks.co.kr/common/img/footer/footer_logo.png);
+  background-repeat: no-repeat;
+  background-position: right top;
 }
 .footer-nav__managing {
   color: #fff;
   display: flex;
   flex-flow: row nowrap;
-  margin: 10px 0;
 }
 .footer-nav__list {
   width: 20%;
   margin: 5px;
   font-weight: 500;
-  cursor: pointer;
+  text-align: left;
 }
 .footer-nav__heading {
   text-transform: uppercase;
   font-size: 1.4rem;
-  line-height: 40px;
+  line-height: 38px;
   margin: 2px;
 }
 .footer-nav__inner-item {
   font-size: 1.2rem;
   line-height: 24px;
 }
-.award, .policy, .store,.company-info, .copyright{
-  text-align: center;
-  background-color: transparent;
-}
-.award-item, .policy__item, .store-item, .copyright, .address {
-  display: inline-block;
-  font-size: 0;
-}
 .award {
-  font-size: 0;
-  margin: 40px 0 ;
+  background-color: #282828;
+  margin: 20px;
+  padding: 10px 0;
 }
 .award-item {
+  display: inline-block;
   width: 16.6%;
   padding: 10px 0;
 }
@@ -887,6 +921,7 @@ display: block;
 margin: 30px 0 0;
 }
 .policy__item {
+  display: inline-block;
   padding: 10px 0 5px;
   font-size: 1.2rem;
   font-weight: 500;
@@ -898,21 +933,23 @@ margin: 30px 0 0;
 .policy__item span {
   color: #393939;
 }
-.store {
-  margin: 10px;
-}
 .store-item {
+  display: inline-block;
   font-size: 1.2rem;
   font-weight: 500;
-  border: 3px solid #fff;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin: 10px 3px;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  padding: 8px 20px;
+  margin: 10px 2px;
   color: #fff;
   font-weight: 600;
 }
+.store-item:hover{
+  text-decoration: underline;
+}
 .company-info{
   text-align: center;
+  width: 100%;
 }
 .company-info__all{
   display: inline-block;
@@ -922,12 +959,15 @@ margin: 30px 0 0;
   display: inline-block;
   text-transform: uppercase;
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 500;
   margin: 0 auto;
   padding: 25px 0 5px;
 }
+.company-info-title span, .company-info-number {
+  margin: 0 3px;
+}
 .company-info-detail {
-  padding-right: 10px;
+  margin-right: 20px;
 }
 .copyright {
   font-size: 1.2rem;
@@ -935,4 +975,3 @@ margin: 30px 0 0;
   line-height: 40px;
   width: 500px;
 }
-

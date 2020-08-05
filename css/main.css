@@ -1,10 +1,5 @@
 @import url("https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css");
-<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800&display=swap');
-=======
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Maven+Pro:wght@400;500;600;669&display=swap');
-
->>>>>>> bb893100db60896a44608be25826281fed3433a4
 *,*::before,*::after{
   font-family: 'Maven Pro', sans-serif;
   box-sizing: border-box;

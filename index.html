@@ -33,7 +33,7 @@
 </head>
 <body>
     <div class="container">
-        <header class="header">
+       <header class="header">
             <div class="header__inner">
                 <h1 class="logo">
                     <a class="logo__img" href="#">
@@ -396,7 +396,8 @@
                     </li> -->
                 </ul>
             </section>
-        </header>
+        </header> 
+        <main class="main">
             <!-- 여름 프로모션 -->
             <section class="summer-promotion">
                 <div class="summer-promotion__inner">
@@ -428,7 +429,7 @@
             <!-- 공지사항 -->
             <div class="noti-pro-wrapper">
                 <section class="notice">
-                    <h2 class="notice-heading"><a href="#">공지사항</a></h2>
+                    <h2 class="notice-heading">공지사항</h2>
                     <ul class="notice-list">
                         <li class="notice-item"><a href="#">홈페이지 이용약관 개정 안내</a></li>
                         <!-- <li class="notice-item"><a href='#'>더양평DTR점 주문시 유의 사항</a></li>
@@ -441,7 +442,9 @@
                 </section>
                 <!-- 스타벅스 프로모션 -->
                 <section class="promotion">
-                    <h2 class="promotion__heading"><a href="#">스타벅스 프로모션</a></h2>
+                    <h2 class="promotion__heading" tabindex="0">
+                        스타벅스 프로모션
+                    </h2>
                     <button class="promotion__dropdown">
                         <img src="./images/btn_prom_down.png" alt="스타벅스 프로모션 펼치기">
                     </button>
@@ -476,16 +479,16 @@
             </section>
 
             <!-- 2020 서머3 프로모션 원두 -->
-            <section class="summer-bean">
+            <section class="summer-bean clearfix">
                 <h2 class="a11y-hidden">2020 서머3 프로모션 원두</h2>
                 <div class="summer-bean-wrapper">
-                    <figure class="summer-bean-figure">
+                    <figure class="summer-bean-figure ">
                     <img src="./images/20_summer_rwanda_bean.png" alt="르완다 블론드 로스트 원두" class="summer-bean-img">
                     <!-- <figcaption class="summer-bean-figcaption">르완다 블론드 원두</figcaption> -->
                     </figure>
                     <dl class="summer-bean-info">
                     <dt class="summer-bean-title">르완다 블론드 로스트</dt>
-                    <dd class="summer-bean-description">키 라임의 섬세한 산미로 시작하여 꿀과 같은 달콤함으로 마무리되는</dd>
+                    <dd class="summer-bean-description">키 라임의 섬세한 산미로 시작하여 꿀과 같은 달콤함으로 마무리 되는</dd>
                     <dd class="summer-bean-detail">비옥한 화산 토양, 높은 고도, 풍부한 강우량으로<br> 이상적인 풍미를 자랑하는 르완다 블론드 로스트를 즐겨보세요.<br> 시럽과 같은 부드러운 바디감을 갖고 있어 아이스 커피로도 좋습니다.</dd>
                     </dl>
                     <a href="" class=summer-bean-more>자세히 보기</a>
@@ -505,8 +508,8 @@
                     </ul>
                     <a href="#" class="more-btn more-btn__new-arrival">자세히 보기</a>
                 </div>
-                <div class="new-arrival__bgi appear">
-                    <img src="./images/summer2_reserve_bean.png" tab-index='-1'>
+                <div class="new-arrival__bgi appear" tabindex="-1">
+                    <img src="./images/summer2_reserve_bean.png" alt="">
                 </div>
             </section>
 
@@ -567,8 +570,7 @@
             </section>
             <aside class="global-widget">
                 <a href="#" class="global-widget__link">
-                    <img src="./images/20200714_badge_pc.png" 
-                    width="141px" height="252px" alt="홈카페 자세히보기 링크">
+                    <img src="./images/20200714_badge_pc.png" alt="홈카페 자세히보기 링크">
                 </a>
             </aside>
         </main>
@@ -620,38 +622,48 @@
                     </li>
                 </ul>
             </nav>
-            <ul class="award">
-            <div class="award-list">
-                <li class="award-item"><img src="./images/footer_award17_01.jpg" alt="우수기업 표창"></li>
-                <li class="award-item"><img src="./images/footer_award17_02.jpg" alt="장애인고용촉진 포상"></li>
-                <li class="award-item"><img src="./images/footer_award17_03.jpg" alt="우수 모범 기업"></li>
-                <li class="award-item"><img src="./images/footer_award17_04.jpg" alt="농축산부 우수사례 기업"></li>
-                <li class="award-item"><img src="./images/footer_award17_05.jpg" alt="여성인재경영 우수사례 기업"></li>
-                <li class="award-item"><img src="./images/footer_award17_06.jpg" alt="최고의 직장 톱10"></li>
+            <div class="award">
+                <ul class="award-list">
+                    <li class="award-item"><img src="./images/footer_award17_01.jpg" alt="우수기업 표창"></li>
+                    <li class="award-item"><img src="./images/footer_award17_02.jpg" alt="장애인고용촉진 포상"></li>
+                    <li class="award-item"><img src="./images/footer_award17_03.jpg" alt="우수 모범 기업"></li>
+                    <li class="award-item"><img src="./images/footer_award17_04.jpg" alt="농축산부 우수사례 기업"></li>
+                    <li class="award-item"><img src="./images/footer_award17_05.jpg" alt="여성인재경영 우수사례 기업"></li>
+                    <li class="award-item"><img src="./images/footer_award17_06.jpg" alt="최고의 직장 톱10"></li>
+                </ul>
             </div>
-            </ul>
             <section class="policy">
-                <h2 class="a11y-hidden"></h2>
+                <h2 class="a11y-hidden">이용약관</h2>
                 <ul class="policy__list">
-                    <li class="policy__item policy__item-green">개인정보처리방침</li>
+                    <li class="policy__item policy__item-green">
+                        <a href="https://www.starbucks.co.kr/footer/etc/privacy.do">
+                            개인정보처리방침
+                        </a>
+                    </li>
                     <li class="policy__item">
-                        <span class="aria-hidden">ㅣ</span>
-                        영상정보처리기기 운영관리방침</li>
+                        <a href="https://www.starbucks.co.kr/footer/etc/rules_vod.do">
+                         영상정보처리기기 운영관리방침</a>
+                    </li>
                     <li class="policy__item">
-                        <span class="aria-hidden">ㅣ</span>
-                        홈페이지 이용약관</li>
+                        <a href="https://www.starbucks.co.kr/footer/etc/rules.do">
+                         홈페이지 이용약관</a>
+                    </li>
                     <li class="policy__item">
-                        <span class="aria-hidden">ㅣ</span>
-                        위치정보 이용약관</li>
+                        <a href="https://www.starbucks.co.kr/footer/etc/rules_loc.do">
+                         위치정보 이용약관</a>
+                    </li> 
                     <li class="policy__item">
-                        <span class="aria-hidden">ㅣ</span>
-                        스타벅스 카드 이용약관</li>
+                        <a href="https://www.starbucks.co.kr/footer/etc/rules_msr.do">
+                         스타벅스 카드 이용약관</a>
+                    </li>
                     <li class="policy__item">
-                        <span class="aria-hidden">ㅣ</span>
-                        비회원 이용약관</li>
+                        <a href="https://www.starbucks.co.kr/footer/etc/rules_non.do">
+                        비회원 이용약관</a>
+                    </li>
                     <li class="policy__item">
-                        <span class="aria-hidden">ㅣ</span>
-                        윤리경영 핫라인</li>
+                        <a href="https://www.starbucks.co.kr/footer/etc/hotline.do">
+                        윤리경영 핫라인</a>
+                    </li>
                 </ul>
             </section>
             <ul class="store">

@@ -33,7 +33,7 @@
 </head>
 <body>
     <div class="container">
-        <header class="header">
+       <header class="header">
             <div class="header__inner">
                 <h1 class="logo">
                     <a class="logo__img" href="#">
@@ -89,9 +89,9 @@
                     </ul>
                 </nav>
             </div>
-            <section class="main-menu-panel a11y-hidden">
+            <section class="main-menu-panel">
                 <ul class="main-menu-panel__list">
-                    <li class="main-menu-panel__item" id="navPanelCoffee" aria-labelledby="navHeaderCoffee">
+                     <li class="main-menu-panel__item" id="navPanelCoffee" aria-labelledby="navHeaderCoffee">
                         <div class="main-menu-panel__inner">
                             <div class="main-menu-panel__wrapper">
                                 <h3 class="main-menu-panel__heading"><a href="#">커피</a></h3>
@@ -396,8 +396,169 @@
                     </li> -->
                 </ul>
             </section>
-        </header>
+        </header> 
         <main class="main">
+            <!-- 여름 프로모션 -->
+            <section class="summer-promotion" tabindex="0">
+                <div class="summer-promotion__inner">
+                    <h2 class="summer-promotion__heading a11y-hidden">써머 프로모션, 신상 음료 세 가지가 출시.</h2>
+                    <h3 class="summer-promotion__slogan">
+                        <img src="./images/20_summer3_emblem.png" alt="프로모션 슬로건 Stay chill, Stay playful" class="summer-promotion__slogan">
+                    </h3>
+                    <ul class="summer-promotion__product-list">
+                        <li class="summer-promotion__items summer-promotion__item1">
+                            <a href="#" class="summer-promotion__items-link"><span class="a11y-hidden">첫번째, 스위티 자몽 라임 블렌디드 자세히보기.</span></a>
+                            <div class="summer-promotion__item-wrapper">
+                            </div>
+                        </li>
+                        <li class="summer-promotion__items summer-promotion__item2">
+                            <a href="#" class="summer-promotion__items-link"><span class="a11y-hidden">두번째, 블론드 서머 라떼 자세히보기.</span></a>
+                            <div class="summer-promotion__item-wrapper">
+                            </div>
+                        </li>
+                        <li class="summer-promotion__items summer-promotion__item3">
+                            <a href="#" class="summer-promotion__items-link"><span class="a11y-hidden">세번째, 스위티 멜론 블론디드 자세히보기.</span></a>
+                            <div class="summer-promotion__item-wrapper">
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="#" class="summer-promotion__more"><span class="a11y-hidden">써머 프로모션 음료에 대해서</span> 자세히 보기</a>
+                </div>
+            </section>
+
+            <!-- 공지사항 -->
+            <div class="noti-pro-wrapper">
+                <section class="notice">
+                    <h2 class="notice-heading">공지사항</h2>
+                    <ul class="notice-list">
+                        <li class="notice-item"><a href="#">홈페이지 이용약관 개정 안내</a></li>
+                        <!-- <li class="notice-item"><a href='#'>더양평DTR점 주문시 유의 사항</a></li>
+                        <li class="notice-item"><a href='#'>시스템 개선 및 점검 안내</a></li>
+                        <li class="notice-item"><a href='#'>전자영수증 서비스 점검 안내</a></li> -->
+                    </ul>
+                    <a href="#" class="notice-more">
+                        <img src="https://www.starbucks.co.kr/common/img/common/btn_notice_plus.png" alt="공지사항 더보기 버튼">
+                    </a>
+                </section>
+                <!-- 스타벅스 프로모션 -->
+                <section class="promotion">
+                    <h2 class="promotion__heading">
+                        스타벅스 프로모션
+                    </h2>
+                    <button class="promotion__dropdown">
+                        <img src="./images/btn_prom_down.png" alt="스타벅스 프로모션 펼치기">
+                    </button>
+                </section>
+            </div>
+            <!-- 슬라이드 메뉴 프로모션 -->
+            <section class="promotion-panel">
+                <ul class="promotion-panel__list ">
+                    <li class="promotion-panel__item">
+                        <img src="https://image.istarbucks.co.kr/upload/banner/nu5js2_20200713164018239.jpg" 
+                        alt="Stay chill. Stay playful. 스타벅스에서 준비한 다채로운 제상품과 함께 시원한 여름을 즐겨보세요" class="promotion-panel__img">
+                        <span class="a11y-hidden">기간 <time datetime="2020-07-14T00:00:00Z" class="promotion-panel-time">2020년 7월 14일</time> 부터 <time class="promotion-time" datetime="2020-09-07T00:00:00Z"></time>2020년 9월 7일</time> 까지</span>
+                        <button class="promotion-panel__more">자세히보기</button>
+                    </li>
+                    <li class="promotion-panel__item promotion-panel__item--active">
+                        <img src="https://image.istarbucks.co.kr/upload/banner/uV703j_20200603100100394.jpg" 
+                        alt="자메이카 블루 마운틴, 이미지는 연출 된 것으로, 이미지 내 MD상품은 실제 판매되지 않습니다. 해당 음료와 원두는 리저브 매장에서만 판매됩니다." class="promotion__img">
+                        <span class="a11y-hidden">기간 <time datetime="2020-06-20T00:00:00Z" class="promotion-panel-time">2020년 6월 20일</time> 부터 <time class="promotion-time" datetime="2020-08-31T00:00:00Z"></time>2020년 8월 31일</time> 까지</span>
+                        <button class="promotion-panel__more">자세히보기</button>
+                    </li>
+                    <li class="promotion-panel__item">
+                        <img src="https://image.istarbucks.co.kr/upload/banner/uX1xA2_20191227175905000.jpg" 
+                        alt="회원 계정에 등록된 스타벅스 카드로 결제 시, 1만원당 별 1개를 즉시 추가로 드립니다!" class="promotion-panel__img">
+                        <span class="a11y-hidden">기간 <time datetime="2020-01-01T00:00:00Z" class="promotion-panel-time">2020년 1월 1일 수요일</time> 부터 <time class="promotion-time" datetime="2020-12-31T00:00:00Z"></time>2020년 12월 31일 목요일</time> 까지</span>
+                        <button class="promotion-panel__more">자세히보기</button>
+                    </li>
+                </ul>
+                <button class="promotion-panel__prev">이전 슬라이드 보기</button>
+                <button class="promotion-panel__next">다음 슬라이드 보기</button>
+                <ul class="promotion-panel__controls">
+                    <li class="promotion-panel-switch">
+                       <button class="promotion-panel-autoslide--pause">자동슬라이드 일시정지</button>
+                    </li>
+                    <li class="promotion-panel-dot">
+                        <button class="promotion-panel-autoslide-btn promotion-panel-autoslide--first">
+                            첫번째 슬라이드 보기.
+                        </button>
+                    </li>
+                    <li class="promotion-panel-dot">
+                        <button class="promotion-panel-autoslide-btn promotion-panel-autoslide--second">
+                            두번째 슬라이드 보기.
+                        </button>
+                    </li>
+                    <li class="promotion-panel-dot">
+                        <button class="promotion-panel-autoslide-btn promotion-panel-autoslide--third">
+                            세번째 슬라이드 보기.
+                        </button>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- 리워드 -->
+            <section class="rewards main-section">
+                <div class="rewards__wrapper">
+                    <h2 class="reward_logo">
+                        <img src="./images/reward_logo.png" alt="마이 스타벅스 리워드">
+                    </h2>
+                    <h3 class="rewards__heading">
+                        스타벅스만의 <em>특별한 혜택,</em> 마이 스타벅스 <em>리워드</em>
+                    </h3>
+                    <p class="rewards__description">
+                        스타벅스 회원이세요? 로그인을 통해 나만의 리워드를 확인해 보세요.<br> 스타벅스 회원이 아니세요? 가입을 통해 리워드 혜택을 즐기세요.
+                    </p>
+                    <a href="#" class="reward-btn">
+                        회원가입
+                    </a>
+                    <a href="#" class="reward-btn">
+                        로그인
+                    </a>
+                    <p class="rewards__description">
+                        회원 가입 후, 스타벅스 e-Gift Card를<br><em>"나에게 선물하기"로 구매하시고, 편리하게 등록하세요!</em><br> 카드를 등록하여 마이 스타벅스 리워드 회원이 되신 후,<br> 첫 구매를 하시면 무료 음료 쿠폰을 드립니다!
+                    </p>
+                    <a href="#" class="reward-btn reward-btn__gift">
+                        e-Gift Card 선물하기
+                    </a>
+                </div>
+            </section>
+
+            <!-- 2020 서머3 프로모션 원두 -->
+            <section class="summer-bean clearfix">
+                <h2 class="a11y-hidden">2020 서머3 프로모션 원두</h2>
+                <div class="summer-bean-wrapper">
+                    <figure class="summer-bean-figure ">
+                    <img src="./images/20_summer_rwanda_bean.png" alt="르완다 블론드 로스트 원두" class="summer-bean-img">
+                    <!-- <figcaption class="summer-bean-figcaption">르완다 블론드 원두</figcaption> -->
+                    </figure>
+                    <dl class="summer-bean-info">
+                    <dt class="summer-bean-title">르완다 블론드 로스트</dt>
+                    <dd class="summer-bean-description">키 라임의 섬세한 산미로 시작하여 꿀과 같은 달콤함으로 마무리 되는</dd>
+                    <dd class="summer-bean-detail">비옥한 화산 토양, 높은 고도, 풍부한 강우량으로<br> 이상적인 풍미를 자랑하는 르완다 블론드 로스트를 즐겨보세요.<br> 시럽과 같은 부드러운 바디감을 갖고 있어 아이스 커피로도 좋습니다.</dd>
+                    </dl>
+                    <a href="" class=summer-bean-more>자세히 보기</a>
+                </div>
+            </section>
+
+            <!-- 신상품 -->
+            <section class="new-arrival">
+                <div class="new-arrival__wrapper">
+                    <h2 class="a11y-hidden">신상품</h2>
+                    <h3 class="new-arrival-product">
+                        <img src="./images/summer2_reserve_title.png" alt="자메이카 블루 마운틴">
+                    </h3>
+                    <ul class="new-arrival-notice">
+                        <li>이미지는 연출된 것으로, 이미지 내 MD 상품은 실제 판매되지 않습니다.</li>
+                        <li>해당 음료와 원두는 리저브 매장에서만 판매됩니다.</li>
+                    </ul>
+                    <a href="#" class="more-btn more-btn__new-arrival">자세히 보기</a>
+                </div>
+                <div class="new-arrival__bgi appear" tabindex="-1">
+                    <img src="./images/summer2_reserve_bean.png" alt="">
+                </div>
+            </section>
+
+            <!-- 스타벅스 전체 상품 -->
             <section class="all-products ">
                 <div class="all-products__inner-wrapper clearfix">
                     <div class="all-products__inner clearfix">
@@ -421,6 +582,8 @@
                     </div>
                 </div>
             </section>
+
+            <!-- 리저브 매거진 -->
             <section class="magazine">
                 <div class="magazine__inner-wrapper clearfix">
                     <div class="magazine__inner">
@@ -428,11 +591,166 @@
                         <p class="magazine-suggestion">리저브가 선사하는 특별한 경험을 온라인 매거진으로 만나보세요.</p>
                         <a  class="magazine-more" href="#">EXPLORE OUR STORY</a>
                     </div>
-                    <img class="magazine-img" src="./images/reserve_visual_pc.png" alt="매거진">
+                    <img class="magazine-img" src="./images/reserve_visual_pc.png" alt="리저브 매거진">
                 </div>
             </section>
+            
+            <!-- 가까운 매장찾기 섹션 -->
+            <section class="locate-store">
+                <div class="locate-store__inner">
+                    <h2 class="a11y-hidden">가까운 매장 찾기</h2>
+                    <h3 class="locate-store-heading">스타벅스를 가까이에서 경험해보세요.</h3>
+                    <p class="locate-store-nearby">고객님과 가장 가까이 있는 매장을 찾아보세요.</p>
+                    <p class="locate-store-type">
+                        <span>차별화된 커피 경험을 누릴 수 있는 <em>리저브&#8482; 매장</em></span>
+                        <span>다양한 방법으로 편리하게 즐길 수 있는 <em>드라이브 스루 매장</em></span>
+                        <span>함께해서 더 따듯할 수 있는 지역사회 소통공간 <em>커뮤니티 매장</em></span>
+                    </p>
+                    <a href="" class="locate-store-search">매장찾기</a>
+                    <div class="locate-store-img--leaves"></div>
+                    <div class="locate-store-img--table"></div>
+                    <div class="locate-store-img--cup"></div>
+                    <div class="locate-store-img--house"></div>
+                </div>
+            </section>
+            <aside class="global-widget">
+                <a href="#" class="global-widget__link">
+                    <img src="./images/20200714_badge_pc.png" alt="홈카페 자세히보기 링크">
+                </a>
+            </aside>
         </main>
-        <footer class="footer">푸터</footer>
+        <!-- 푸터 -->
+        <footer class="footer">
+            <nav class="footer-nav">
+                <h2 class="a11y-hidden">하단 네비게이션</h2>
+                <ul class="footer-nav__managing">
+                    <li class="footer-nav__list">
+                        <h3 class="footer-nav__heading"><a href="https://www.starbucks.co.kr/footer/company/index.do">company</a></h3>
+                        <ul class="footer-nav__inner-list">
+                            <li class="footer-nav__inner-item"> 
+                                <a href="https://www.starbucks.co.kr/footer/company/index.do">한눈에 보기</a></li>
+                            <li class="footer-nav__inner-item">
+                                <a href="https://www.starbucks.co.kr/footer/company/mission.do">스타벅스 사명</a></li>
+                            <li class="footer-nav__inner-item">
+                                <a href="https://www.starbucks.co.kr/footer/company/starbucks_information.do">스타벅스 소개</a></li>
+                            <li class="footer-nav__inner-item">
+                                <a href="https://www.starbucks.co.kr/footer/company/news_list.do">국내 뉴스룸</a></li>
+                            <li class="footer-nav__inner-item">
+                                <a href="https://www.starbucks.com/store-locator?map=39.635307,-101.337891,5z">세계의 스타벅스</a></li>
+                            <li class="footer-nav__inner-item">
+                                <a href="https://stories.starbucks.com/">글로벌 뉴스룸</a></li>
+                        </ul>
+                    </li>
+                    <li class="footer-nav__list">
+                        <h3 class="footer-nav__heading"><a href="https://www.starbucks.co.kr/footer/co_sales/index.do">corporate sales</a></h3>
+                        <ul class="footer-nav__inner-list">
+                            <li class="footer-nav__inner-item"> 
+                               <a href="https://www.starbucks.co.kr/footer/co_sales/index.do">단체 및 기업 구매 안내</a></li>
+                        </ul>
+                    </li>
+                    <li class="footer-nav__list">
+                        <h3 class="footer-nav__heading"><a href="#">partnership</a></h3>
+                        <ul class="footer-nav__inner-list">
+                            <li class="footer-nav__inner-item">
+                                <a href="https://www.starbucks.co.kr/footer/partnership/new_partner.do">신규 입점 제의</a></li>
+                            <li class="footer-nav__inner-item">
+                                <a href="https://www.starbucks.co.kr/srm/login.do">협력 고객사 등록 신청</a></li>
+                        </ul>
+                    </li>
+                    <li class="footer-nav__list">
+                        <h3 class="footer-nav__heading"><a href="#">online community</a></h3>
+                        <ul class="footer-nav__inner-list">
+                            <li class="footer-nav__inner-item">
+                               <a href="https://www.facebook.com/starbuckskorea">페이스북</a></li>
+                            <li class="footer-nav__inner-item">
+                                <a href="https://twitter.com/StarbucksKorea">트위터</a></li>
+                            <li class="footer-nav__inner-item">
+                                <a href="https://www.youtube.com/user/starbuckskorea">유투브</a></li>
+                            <li class="footer-nav__inner-item">
+                                <a href="http://blog.naver.com/starbuckskor">블로그</a></li>
+                            <li class="footer-nav__inner-item">
+                                <a href="https://www.instagram.com/starbuckskorea/">인스타그램</a></li>
+                        </ul>
+                    </li>
+                    <li class="footer-nav__list">
+                        <h3 class="footer-nav__heading"><a href="#">recruit</a></h3>
+                        <ul class="footer-nav__inner-list">
+                            <li class="footer-nav__inner-item">
+                                <a href="https://www.starbucks.co.kr/footer/recruit/index.do">채용 소개</a></li>
+                            <li class="footer-nav__inner-item">
+                                <a href="http://job.shinsegae.com/recruit_info/notice/notice02_view.jsp?notino=2895">채용 지원하기</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="award">
+                <ul class="award-list">
+                    <li class="award-item"><img src="./images/footer_award17_01.jpg" alt="우수기업 표창"></li>
+                    <li class="award-item"><img src="./images/footer_award17_02.jpg" alt="장애인고용촉진 포상"></li>
+                    <li class="award-item"><img src="./images/footer_award17_03.jpg" alt="우수 모범 기업"></li>
+                    <li class="award-item"><img src="./images/footer_award17_04.jpg" alt="농축산부 우수사례 기업"></li>
+                    <li class="award-item"><img src="./images/footer_award17_05.jpg" alt="여성인재경영 우수사례 기업"></li>
+                    <li class="award-item"><img src="./images/footer_award17_06.jpg" alt="최고의 직장 톱10"></li>
+                </ul>
+            </div>
+            <section class="policy">
+                <h2 class="a11y-hidden">이용약관</h2>
+                <ul class="policy__list">
+                    <li class="policy__item policy__item-green">
+                        <a href="https://www.starbucks.co.kr/footer/etc/privacy.do">
+                            개인정보처리방침
+                        </a>
+                    </li>
+                    <li class="policy__item">
+                        <a href="https://www.starbucks.co.kr/footer/etc/rules_vod.do">
+                         영상정보처리기기 운영관리방침</a>
+                    </li>
+                    <li class="policy__item">
+                        <a href="https://www.starbucks.co.kr/footer/etc/rules.do">
+                         홈페이지 이용약관</a>
+                    </li>
+                    <li class="policy__item">
+                        <a href="https://www.starbucks.co.kr/footer/etc/rules_loc.do">
+                         위치정보 이용약관</a>
+                    </li> 
+                    <li class="policy__item">
+                        <a href="https://www.starbucks.co.kr/footer/etc/rules_msr.do">
+                         스타벅스 카드 이용약관</a>
+                    </li>
+                    <li class="policy__item">
+                        <a href="https://www.starbucks.co.kr/footer/etc/rules_non.do">
+                        비회원 이용약관</a>
+                    </li>
+                    <li class="policy__item">
+                        <a href="https://www.starbucks.co.kr/footer/etc/hotline.do">
+                        윤리경영 핫라인</a>
+                    </li>
+                </ul>
+            </section>
+            <ul class="store">
+                <li class="store-item"><a href="#">찾아오시는 길</a></li>
+                <li class="store-item"><a href="#">신규입점 제의</a></li>
+                <li class="store-item"><a href="#">사이트 맵</a></li>
+            </ul>
+            <section class="company-info">
+                <h2 class="a11y-hidden">회사 정보</h2>
+                <dl class="company-info__all">
+                    <dt class="company-info-title">사업자 등록번호<span class="aria-hidden">:</span></dt>
+                    <dd class="company-info-detail">201-81-21515</dd>
+                    <dt class="company-info-title">(주)스타벅스커피 코리아 대표이사<span class="aria-hidden">:</span></dt>
+                    <dd class="company-info-detail">송 데이비드 호섭</dd>
+                    <dt class="company-info-title">개인정보 책임자<span class="aria-hidden">:</span></dt>
+                    <dd class="company-info-detail">장석현</dd>
+                </dl>
+                <address class="company-info-number">tel<span class="aria-hidden">:</span>1522-3232</address>
+            </section>
+            <small class="copyright">&copy; 2020 Starbucks Coffe Company All Rights Reserved</small>
+        </footer>
     </div>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

@@ -1,4 +1,5 @@
 @import url("https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css");
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Maven+Pro:wght@400;500;600;669&display=swap');
 *,*::before,*::after{
   font-family: 'NanumBarunGothic', sans-serif;
   box-sizing: border-box;

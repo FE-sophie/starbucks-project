@@ -188,50 +188,50 @@ a{
 .main{
   height: 3000px;
 }
+
 /* 서머 프로모션 원두 */
 .summer-bean {
   background-color: violet;
   background-image: url('//image.istarbucks.co.kr/upload/common/img/main/2020/20_summer_rwanda_bg.jpg');
   background-size: cover;
   margin: 0 auto;
-  padding: 10px;
 }
 .summer-bean-wrapper {
   margin: 0 auto;
-  height: 573px;
-  width: 950px;
+  width: 980px;
   position: relative;
 }
 .summer-bean-figure {
-  position: absolute;
-  top: 65px;
-  left: 30px;
+  float: left;
+  margin: 35px;
+  padding: 30px 0;
   animation: move 1.5s ease-in-out normal forwards;
 }
 /* 키프레임 */
 @keyframes move {
   0% {
     transform: translateX(-1000px);
+    opacity: .5;
   }
   100% {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 @keyframes movemove{
   0% {
     transform: translateX(1000px);
+    opacity: .5;
   }
   100% {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 .summer-bean-info {
-  max-width: 600px;
-  display: flex;
-  flex-flow: column nowrap;
-  position: absolute;
-  top: 150px;
-  right: 10px;
+  display: inline-block;
+  padding-top: 170px;
+  margin: 0 75px;
   animation: movemove 1.5s ease-in-out normal forwards;
 }
 .summer-bean-title {
@@ -242,11 +242,12 @@ a{
   margin-bottom: 20px;
 }
 .summer-bean-description {
-  order: -1;
   color: #b9e0c6;
   font-size: 1.9rem;
   font-weight: 700;
-  margin-bottom: 5px;
+  position: absolute;
+  top: 145px;
+  width: 510px;
 }
 .summer-bean-detail {
   color: #fff;
@@ -262,10 +263,15 @@ a{
   color: #fff;
   font-size: 1.4rem;
   padding: 10px 25px;
-  position: absolute;
-  top: 375px;
-  left: 430px;
+  margin: 20px 75px;
   animation: movemove 1.5s ease-in-out normal forwards;
+  transition: all 800ms;
+}
+.summer-bean-more:hover {
+  background-color: #fff;
+  color: #000;
+  text-decoration: underline;
+  cursor: pointer;
 }
 /* 푸터 */
 .footer{

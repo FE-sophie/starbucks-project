@@ -123,14 +123,16 @@ a{
   display: inline-block;
   padding: 10px 25px 40px 25px;
 }
-
 /* 메인메뉴 패널 */
 .main-menu-panel{
   width: 100%;
   /* display: block; */
 }
-.act11 .main-menu-panel__item{
+.main-menu-panel__item{
   display: none;
+}
+.act.main-menu-panel__item{
+  display: block;
 }
 .main-menu-panel__item{
   background-color: #2c2a29;
@@ -264,6 +266,96 @@ a{
   height: 35px;
   vertical-align: middle;
 }
+/* 프로모션 패널 */
+.promotion-panel{
+  white-space:nowrap;
+  padding-top:30px;
+  background:#f6f5ef;
+  position: relative;
+  display: none;
+  overflow: hidden;
+}
+.btn-pressed.promotion-panel{
+  display: block;
+}
+.promotion-panel__list{
+  transform:translateX(-480px);
+}
+.promotion-panel__item{
+  text-align: center;
+  display:inline-block;
+}
+.promotion-panel__img{
+  display:block;
+}
+.promotion-panel__more{
+  font-size:1.4rem;
+  padding:10px 25px;
+  border:1px solid black;
+  border-radius:3px;
+  background-color: transparent;
+  position: absolute;
+  bottom:3%;
+  left:76%;
+  margin-bottom:5px;
+  cursor: pointer;
+}
+.promotion-panel__more:hover{
+
+}
+.promotion-panel__prev,.promotion-panel__next{
+  text-indent: -9999px;
+  position:absolute;
+  top:33%;
+  width:55px;
+  height:55px;
+  border:2px solid #222;
+  background-size:cover;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+}
+.promotion-panel__prev{
+  left:16%;
+  background: url(https://www.starbucks.co.kr/common/img/common/arrow_left_on.png) no-repeat center center;
+}
+.promotion-panel__next{
+  right:17%;
+  background:url(https://www.starbucks.co.kr/common/img/common/arrow_right_on.png) no-repeat center center;
+}
+.promotion-panel__item{
+  opacity:0.3;
+}
+.promotion-panel__list .promotion-panel__item--active{
+  opacity:1;
+}
+.promotion-panel__controls{
+  display:flex;
+  flex-flow:row nowrap;
+  justify-content: center;
+  margin-left: -55px;
+  margin-bottom: 40px;
+}
+.promotion-panel-switch,.promotion-panel-dot{
+  padding-right:5px;
+  
+}
+.promotion-panel-dot{
+  padding-right:5px;
+}
+.promotion-panel-autoslide--pause,.promotion-panel-autoslide-btn{
+  width:9px;
+  height:12px;
+  border:0;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+.promotion-panel-autoslide-btn{  
+  background: url(https://www.starbucks.co.kr/common/img/main/main_prom_off.png) no-repeat center center;
+}
+.promotion-panel-autoslide--pause{
+  background: url(https://www.starbucks.co.kr/common/img/main/main_prom_stop.png) no-repeat center center;
+}
 /* 리워드 */
 .rewards{
   background: linear-gradient(90deg,#272727 49%, #d5c799 50%);
@@ -320,8 +412,9 @@ a{
   vertical-align: top;
   width: 251px;
 }
-.reward-btn:hover, .more-btn:hover{
-  color: #fff;
+.reward-btn:hover, .more-btn:hover, .reward-btn:focus, 
+.promotion-panel__more:hover{
+  color: #fff;  
   background-color: #000;
   text-decoration: underline;
 }
@@ -330,6 +423,7 @@ a{
   background-color: violet;
   background-image: url('//image.istarbucks.co.kr/upload/common/img/main/2020/20_summer_rwanda_bg.jpg');
   background-size: cover;
+  background-position-x: -250px;
   margin: 0 auto;
 }
 .summer-bean-wrapper {
@@ -379,7 +473,7 @@ a{
 }
 .summer-bean-description {
   color: #B9E0C6;
-  font-size: 1.rem;
+  font-size: 1.8rem;
   font-weight: 700;
   position: absolute;
   top: 145px;
@@ -388,8 +482,8 @@ a{
 .summer-bean-detail {
   color: #d2d8eb;
   margin: 10px 0;
-  font-size: 1.5rem;
-  line-height: 2.2rem;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
   margin-bottom: 20px;
 }
 .summer-bean-more {
@@ -683,6 +777,12 @@ a{
   position: absolute;
   background-repeat: no-repeat;
 }
+.summer-promotion__items-link{
+  display:inline-block;
+  position:absolute;
+  width:100%;
+  height:100%;
+}
 .summer-promotion__item1{
   background-image: url(../images/summer3_bev2.png);
   background-size: contain;
@@ -748,7 +848,7 @@ a{
   animation: showupAni 1s ease-in-out 4s 1 backwards;
 }
 .summer-promotion__more:hover{
-  background-color: #00b050;
+  background-color: #00B050;
   text-decoration: underline;
   color:#fff;
 }
@@ -866,9 +966,10 @@ a{
   width:141px;
   height:252px;
   top:150px;
-  right:90px;
+  right:74px;
   position:fixed;
 }
+
 /* 푸터 */
 .footer{
   background-color: #2C2A29;
@@ -936,7 +1037,7 @@ a{
 .policy__item-green {
   color: #00b050;
 }
-.store-item:hover, .policy__item a:hover{
+.store-item:hover a, .policy__item a:hover{
   text-decoration: underline;
 }
 .policy__item:not(:last-child)::after{
@@ -951,10 +1052,13 @@ a{
   font-weight: 500;
   border: 2px solid #fff;
   border-radius: 3px;
-  padding: 8px 20px;
   margin: 10px 2px;
   color: #fff;
   font-weight: 600;
+}
+.store-item [href]{
+  display: inline-block;
+  padding: 8px 20px;
 }
 .company-info{
   text-align: center;

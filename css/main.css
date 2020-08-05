@@ -1,6 +1,7 @@
 @import url("https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css");
 *,*::before,*::after{
   font-family: 'NanumBarunGothic', sans-serif;
+  box-sizing: border-box;
 }
 html{
   font-size: 10px;
@@ -25,10 +26,10 @@ a{
   display: block;
   clear: both;
 }
-.container {
+/* 해더 */
+.container{
   padding-top: 115.238px;
 }
-/* 해더 */
 .header{
   background-color: #f6f5ef;
   position: fixed;
@@ -185,53 +186,188 @@ a{
   margin-bottom: 20px;
 }
 /* 메인 */
-.main{
-  height: 3000px;
+/* 공지사항 */
+.noti-pro-wrapper{
+  width: 100%;
+  font-size: 0;
 }
-
+.notice{
+  display: inline-block;
+  background-color: #181818;
+  width: 50%;
+  height: 64px;
+  padding: 0 13px;
+  color: #fff;
+  text-align: right;
+  margin-right: -4px;
+}
+.notice-heading{
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: -1px;
+  font-size: 1.7rem;
+  vertical-align: middle;
+}
+.notice-list{
+  display: inline-block;
+  font-size: 1.3rem;
+  width: 450px;
+  text-align: left;
+  vertical-align: middle;
+}
+.notice-item:hover{
+  text-decoration: underline;
+}
+.notice-more{
+  display: inline-block;
+  height: 64px;
+  line-height: 64px;
+  vertical-align: middle;
+}
+.notice-more img{
+  width: 36px;
+  height: 36px;
+  vertical-align: middle;
+}
+/* 스타벅스 프로모션 */
+.promotion{
+  display: inline-block;
+  text-align: center;
+  width: 50%;
+  height: 64px;
+  line-height: 64px;
+  background-color: #f6f5ef;
+  vertical-align: middle;
+}
+.promotion__heading{
+  display: inline-block;
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-right: 60px;
+  height: 64px;
+  line-height: 64px;
+}
+.promotion__dropdown{
+  display: inline-block;
+  border: none;
+  padding: 0;
+  height: 64px;
+  line-height: 64px;
+  background-color: transparent;
+  vertical-align: top;
+  cursor: pointer;
+}
+.promotion__dropdown img{
+  width: 35px;
+  height: 35px;
+  vertical-align: middle;
+}
+/* 리워드 */
+.rewards{
+  background: linear-gradient(90deg,#272727 49%, #d5c799 50%);
+}
+.rewards__wrapper{
+  width: 1100px;
+  margin: auto;
+  padding-left: 360px;
+  position: relative;
+  background: url(../images/reward_star_bg_w.png) no-repeat -55px , url(../images/reward_texbg.jpg) no-repeat;
+}
+.reward_logo{
+  position: absolute;
+  top: 100px;
+  left: 0;
+}
+.rewards__heading{
+  padding-top: 30px;
+  padding-bottom: 5px;
+  font-size: 1.8rem;
+}
+.rewards__heading em{
+  font-size: 2rem;
+  font-weight: 700;
+}
+.rewards__description{
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  display: inline-block;
+  color: #555;
+  width: 450px;
+  margin-bottom: 30px;
+  margin-right: 10px;
+}
+.rewards__description em{
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.reward-btn{
+  display: inline-block;
+  background-color: transparent;
+  border: 1.5px solid #000;
+  border-radius: 3px;
+  font-size: 1.3rem;
+  color: #000;
+  text-align: center;
+  line-height: 40px;
+  margin-right: 5px;
+  vertical-align: text-bottom;
+  width: 121px;
+  transition: all 800ms;
+}
+.reward-btn__gift{
+  vertical-align: top;
+  width: 251px;
+}
+.reward-btn:hover, .more-btn:hover{
+  color: #fff;
+  background-color: #000;
+  text-decoration: underline;
+}
+/* 여름 원두 */
 /* 서머 프로모션 원두 */
 .summer-bean {
   background-color: violet;
   background-image: url('//image.istarbucks.co.kr/upload/common/img/main/2020/20_summer_rwanda_bg.jpg');
   background-size: cover;
   margin: 0 auto;
+  padding: 10px;
 }
 .summer-bean-wrapper {
   margin: 0 auto;
-  width: 980px;
+  height: 573px;
+  width: 950px;
   position: relative;
 }
 .summer-bean-figure {
-  float: left;
-  margin: 35px;
-  padding: 30px 0;
+  position: absolute;
+  top: 65px;
+  left: 30px;
   animation: move 1.5s ease-in-out normal forwards;
 }
 /* 키프레임 */
 @keyframes move {
   0% {
     transform: translateX(-1000px);
-    opacity: .5;
   }
   100% {
     transform: translateX(0);
-    opacity: 1;
   }
 }
 @keyframes movemove{
   0% {
     transform: translateX(1000px);
-    opacity: .5;
   }
   100% {
     transform: translateX(0);
-    opacity: 1;
   }
 }
 .summer-bean-info {
-  display: inline-block;
-  padding-top: 170px;
-  margin: 0 75px;
+  max-width: 600px;
+  display: flex;
+  flex-flow: column nowrap;
+  position: absolute;
+  top: 150px;
+  right: 10px;
   animation: movemove 1.5s ease-in-out normal forwards;
 }
 .summer-bean-title {
@@ -242,12 +378,11 @@ a{
   margin-bottom: 20px;
 }
 .summer-bean-description {
+  order: -1;
   color: #b9e0c6;
   font-size: 1.9rem;
   font-weight: 700;
-  position: absolute;
-  top: 145px;
-  width: 510px;
+  margin-bottom: 5px;
 }
 .summer-bean-detail {
   color: #fff;
@@ -263,16 +398,472 @@ a{
   color: #fff;
   font-size: 1.4rem;
   padding: 10px 25px;
-  margin: 20px 75px;
+  position: absolute;
+  top: 375px;
+  left: 430px;
   animation: movemove 1.5s ease-in-out normal forwards;
+}
+/* 신상품 */
+.new-arrival{
+  background-color: #c3d2d9;
+  position: relative;
+  overflow: hidden;
+}
+.new-arrival__wrapper{
+  padding-top: 70px;
+  padding-bottom: 30px;
+  position: relative;
+  width: 1300px;
+  margin: auto;
+}
+.new-arrival-product{
+  margin-bottom: 70px;
+}
+.new-arrival-notice{
+  font-size: 1.4rem;
+  color: #5b6567;
+  margin-left: 195px;
+  list-style-type : square;
+  line-height: 2rem;
+}
+.more-btn{
+  font-size: 1.4rem;
+  border: 2px solid #000;
+  border-radius: 3px;
+  padding: 10px 28px;
   transition: all 800ms;
 }
-.summer-bean-more:hover {
-  background-color: #fff;
-  color: #000;
-  text-decoration: underline;
-  cursor: pointer;
+.more-btn__new-arrival{
+  position: absolute;
+  top: 270px;
+  left: 180px;
 }
+/* @keyframes new-arrival--opacity{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+} */
+.new-arrival__bgi{
+  position: absolute;
+  bottom: 0;
+  left:700px;
+  opacity: 0;
+  animation: new-arrival--opacity 2s ease-in-out forwards;
+}
+/* 전체 상품 */
+.all-products{
+  background:url(../images/fav_prod_bg_new.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  padding:110px 0;
+  width:100%;
+  overflow: hidden;
+}
+.all-products__inner-wrapper{
+  width:1200px;
+  margin:0 auto;
+  /* padding:0 20px; */
+}
+.all-products__inner{
+  text-align: right;
+  width:500px;
+  float: left;
+  color:#fff;
+  position: relative;
+}
+.all-products__inner em{
+  font-weight: 600;
+  line-height:1.3;
+}
+.all-products-heading{
+  font-size:2.6rem;
+  padding-top:260px;
+  padding-bottom:8px;
+  animation:recommendAni1 2s;
+}
+.all-products-recommend{
+  font-size:1.6rem;
+  line-height:2rem;
+  animation:recommendAni1 2s;
+}
+
+.all-products-heading em:nth-child(2)::before{
+  content: "";
+  display: block;
+}
+.all-products-slogun{
+  font-family: 'Maven Pro', sans-serif;
+  position: absolute;
+  font-weight: 500;
+  top:0;
+  right:0;
+  animation:recommendAni1 3s;
+}
+.all-products-slogun span{
+  display: block;
+  letter-spacing: 0.1em;
+  margin-right:-0.1em;
+}
+.all-products-slogun-txt1{
+  font-size: 100px;
+}
+.all-products-slogun-txt2{
+  font-size: 80px;
+}
+.all-products-slogun-txt3{
+  font-size: 50px;
+}
+.all-products-more{
+  display: inline-block;
+  padding:10px 27px;
+  margin:40px 0;
+  font-size:1.4rem;
+  border:2px solid #fff;
+  color:#fff;
+  animation:recommendAni2 1s;
+  transition: background-color 1s,text-decoration 100s;
+}
+.all-products-more:hover{
+  background-color: #fff;
+  text-decoration: underline;
+  color:#555;
+  font-weight: 700;
+}
+.all-products-img{
+  text-align: right;
+  margin-top:-40px;
+  padding-right:30px;
+  /* margin-left:20px; */
+  width:100%;
+}
+.all-products-img img{
+  max-width: 50%;
+}
+/* 매거진 */
+.magazine{
+  width:1200px;
+  position: relative;
+  margin:0 auto;
+  overflow:hidden;
+}
+.magazine__inner-wrapper::before{
+  content: "";
+  display: block;
+  width:1px;
+  height:65%;
+  position: absolute;
+  z-index: 200;
+  top:50%;
+  transform: translateY(-50%);
+  left:45%;
+  background-color: #ddd;
+}
+.magazine__inner-wrapper::after{
+  content: "";
+  display: block;
+  width:80%;
+  height:1px;
+  position: absolute;
+  z-index: 200;
+  top:64%;
+  /* transform: translateX(-50%); */
+  right:0;
+  z-index: -1;
+  background-color: #ddd; 
+}
+.magazine__inner-wrapper{
+  width:1200px;
+  margin:0 auto;
+  height:100%;
+  padding:70px 30px;
+  position: relative;
+}
+.magazine-img{
+  max-width: 100%;
+}
+.magazine__inner{
+  float:right;
+  padding-right:90px;
+}
+.magazine-heading,.magazine-suggestion{
+ animation: magazineAni1 2s;
+}
+.magazine-heading{
+  background: url(../images/reserve_text_pc1.png) no-repeat;
+  background-position:left;
+  background-size:100% auto;
+  width:500px;
+  height:100px;
+  margin-top:180px;
+  text-indent: 9999px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.magazine-suggestion{
+  font-size:1.4rem;
+  padding:20px 0;
+  color:#555;
+  margin-top:-2px 
+  }
+.magazine-more{
+  margin-top:35px;
+  font-size:1.8rem;
+  letter-spacing:0.6em ;
+  animation:all 3s;
+  color:#444;
+  display: inline-block;
+  padding:10px;
+  margin-left:-10px;
+  animation: magazineAni1 3s;
+  background-color: #fff;
+  transition: background-color 1000ms;
+}
+.magazine-more:hover{
+  background-color:#976d3f;
+  color:#fff;
+}
+/* 애니메이션 */
+@keyframes magazineAni1{
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+@keyframes recommendAni1{
+  0%{
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+@keyframes recommendAni2{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+/* 섬머 프로모션 */
+.summer-promotion{
+  height:640px;
+  width:100%;
+  padding-top:70px;
+  background-image:url(../images/summer3_mv_bg.jpg);
+}
+.summer-promotion__inner{
+  width:1100px;
+  height:100%;
+  margin:0 auto;
+  position: relative;
+}
+.summer-promotion__slogan{
+  animation: showupAni 1s ease-in-out 3s 1 backwards;
+}
+.summer-promotion__heading{
+  position: absolute;
+}
+.summer-promotion__product-list{
+}
+.summer-promotion__items{
+  position: absolute;
+  background-repeat: no-repeat;
+}
+.summer-promotion__item1{
+  background-image: url(../images/summer3_bev2.png);
+  background-size: contain;
+  top:0;
+  left:600px;
+  width:170px;
+  height:387px;
+  animation: showupAni 1s ease-in-out 0s 1 backwards;
+}
+.summer-promotion__item2{
+  background-image: url(../images/summer3_bev1.png);
+  background-size: contain;
+  top:170px;
+  left:370px;
+  width:285px;
+  height:363px;
+  animation: showupAni 1s ease-in-out 1s 1 backwards;
+}
+.summer-promotion__item3{
+  background-image: url(../images/summer3_bev3.png);
+  background-size: contain;
+  top:120px;
+  left:711px;
+  width:322px;
+  height:347px;
+  animation: showupAni 1s ease-in-out 2s 1 backwards;
+}
+.summer-promotion__item1 .summer-promotion__item-wrapper{
+  background-image: url(https://image.istarbucks.co.kr/upload/common/img/main/2020/summer3_bev2_txt.png);
+  position: absolute;
+  width:213px;
+  height:82px;
+  top:0;
+  left:-230px;
+}
+.summer-promotion__item2 .summer-promotion__item-wrapper{
+  background-image: url(https://image.istarbucks.co.kr/upload/common/img/main/2020/summer3_bev1_txt.png);
+  position: absolute;
+  width:209px;
+  height:56px;
+  top:210px;
+  left:-180px;
+  animation: showupAni 0.2s ease-in-out 0s 1 forwards;
+}
+.summer-promotion__item3 .summer-promotion__item-wrapper{background-image: url(https://image.istarbucks.co.kr/upload/common/img/main/2020/summer3_bev2_txt.png);
+  position: absolute;
+  background-image: url(https://image.istarbucks.co.kr/upload/common/img/main/2020/summer3_bev3_txt.png);
+  width:215px;
+  height:56px;
+  top:360px;
+  left:80px;
+}
+.summer-promotion__more{
+  margin-top:35px;
+  display:inline-block;
+  font-size:1.5rem;
+  color:#fff;
+  padding:10px 28px;
+  border:2px solid #fff;
+  transition-property: text-decoration, color, background-color;
+  transition-duration: 0.2s, 0.4s, 0.5s;
+  border-radius: 3px;
+  animation: showupAni 1s ease-in-out 4s 1 backwards;
+}
+.summer-promotion__more:hover{
+  background-color: #00b050;
+  text-decoration: underline;
+  color:#fff;
+}
+@keyframes showupAni{
+  0%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
+}
+@keyframes moveAni{
+  0%{
+    transform:translateX(2000px);
+  }
+  100%{
+    transform:translateX(0px);
+  }
+}
+/* 고객님 근처매장을 찾아보세요 */
+.locate-store{
+  background-image:url(../images/store_bg.jpg);
+  overflow: hidden;
+}
+.locate-store__inner{
+  width:1100px;
+  height:400px;
+  margin:0 auto;
+  padding:100px 0 100px 600px;
+  position: relative;
+}
+.locate-store-img--leaves{
+  background-image: url(https://www.starbucks.co.kr/common/img/main/store_exp_img03.png);
+  background-repeat: no-repeat;
+  height:142px;
+  width:343px;
+  position: absolute;
+  top:-60px;
+  left:360px;
+  z-index:0;
+}
+.locate-store-img--leaves,
+.locate-store-img--table,
+.locate-store-img--cup,
+.locate-store-img--house{
+  animation: showupAni 3s ease-in-out 0s 1 forwards;
+}
+.locate-store-img--table{
+  background-image: url(../images/store_exp_img02.png);
+  background-repeat: no-repeat;
+  width:366px;
+  height:312px;
+  position: absolute;
+  top:0;
+  left:0;
+
+}
+.locate-store-img--cup{
+  background-image: url(../images/store_exp_img01.png);
+  background-repeat: no-repeat;
+  width:228px;
+  height:228px;
+  position: absolute;
+  top:149px;
+  left:215px;
+}
+.locate-store-img--house{
+  background-image: url(../images/store_exp_img04.png);
+  background-repeat: no-repeat;
+  width:230px;
+  height:228px;
+  position: absolute;
+  top:298px;
+  right:80px;
+}
+.locate-store-heading{
+  font-size:2.4rem;
+  font-weight:600;
+  animation: moveAni 2.5s ease-out 0s 1 forwards;
+}
+.locate-store-nearby{
+  font-size:2rem;
+  margin:7px 0;
+  font-weight:500;
+  animation: moveAni 2.5s ease-out 50ms 1 forwards;
+}
+.locate-store-type{
+  font-size:1.4rem;
+  font-weight: 500;
+  animation: moveAni 2.5s ease-out 100ms 1 forwards;
+}
+.locate-store-type span{
+  display:block;
+  line-height:1.6;
+}
+.locate-store-search{
+  display:inline-block;
+  font-size:1.6rem;
+  border:2px solid #222;
+  padding:8px 32px;
+  border-radius: 3px;
+  margin-top:25px;
+  margin-left:2px;
+  transition-property: text-decoration, color, background-color;
+  transition-duration: 0.2s, 0.4s, 0.4s;
+  animation: moveAni 2.5s ease-out 150ms 1 forwards;
+}
+.locate-store-search:hover{
+  background-color: #222;
+  text-decoration: underline;
+  color:#fff;
+}
+/* 사이드 배너 */
+.global-widget{
+  width:141px;
+  height:252px;
+  top:150px;
+  right:90px;
+  position:fixed;
+}
+/* 푸터 */
 /* 푸터 */
 .footer{
   background-color: #2C2A29;
@@ -327,7 +918,8 @@ a{
   padding: 10px 0;
 }
 .policy {
-margin: 30px 0 0;
+  margin: 30px 0 0;
+  font-size: 0;
 }
 .policy__item {
   display: inline-block;
@@ -339,8 +931,13 @@ margin: 30px 0 0;
 .policy__item-green {
   color: #00b050;
 }
-.policy__item span {
-  color: #393939;
+.policy__item:not(:last-child)::after{
+  content: 'ㅣ';
+  color: #393939; 
+  margin: 10px;
+}
+.store-item:hover, .policy__item:hover{
+  text-decoration: underline;
 }
 .store-item {
   display: inline-block;

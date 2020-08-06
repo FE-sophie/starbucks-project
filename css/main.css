@@ -30,6 +30,24 @@ a{
   display: block;
   clear: both;
 }
+/* 스킵네비 */
+#skip-nav a{
+  position:absolute;
+  top:0px;
+  left:0;
+  width:100%;
+  background-color: #00B050;
+  color:#fff;
+  z-index:0;
+  font-size:1.5rem;
+  padding:5px 0;
+  text-align:center;
+  text-decoration: none;
+}
+#skip-nav a:active, #skip-nav a:focus{
+  top:0;
+  z-index:10000;
+}
 /* 해더 */
 .container{
   padding-top: 115.238px;

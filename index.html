@@ -29,6 +29,8 @@
   <link rel="apple-touch-icon" href="./images/Starbucks_logo.svg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
   <link rel="stylesheet" href="./css/main.css">
+  <script src="./js/jquery-3.4.1.min.js"></script>
+  <script src="./js/main.js"></script>
     <title>스타벅스 코리아</title>
 </head>
 <body>
@@ -57,11 +59,11 @@
                 </ul>
                 <div class="total-search total-search--act">
                     <!-- <button class="total-search__btn total-search__btn--initial" aria-label="통합 검색 활성화 버튼"></button> -->
-                    <form action="#" class="total-search__form">
+                    <form action="#" class="total-search__form" get="post">
                         <fieldset class="total-search__fieldset">
                             <legend>통합검색</legend>
                             <input type="search" placeholder="통합검색" class="total-search__input" required>
-                            <button type="button" class="total-search__btn total--search__btn--act"></button>
+                            <button type="button" class="total-search__btn"></button>
                         </fieldset>
                     </form>
                 </div>
@@ -152,7 +154,7 @@
                             </dl>
                         </aside>
                     </li>
-                    <!-- <li class="main-menu-panel__item" id="navPanelMenu" aria-labelledby="navHeaderMenu">
+                    <li class="main-menu-panel__item" id="navPanelMenu" aria-labelledby="navHeaderMenu">
                         <div class="main-menu-panel__inner">
                             <div class="main-menu-panel__wrapper">
                                 <h3 class="main-menu-panel__heading"><a href="#">음료</a></h3>
@@ -223,8 +225,8 @@
                                 <dd class="side-more-info__description">나이트로 커피 정통의 물결치듯 흘러내리는 캐스케이딩과 부드러운 크림을 경험하세요</dd>
                             </dl>
                         </aside>
-                    </li> -->
-                    <!-- <li class="main-menu-panel__item" id="navPanelStore" aria-labelledby="navHeaderStore">
+                    </li>
+                    <li class="main-menu-panel__item" id="navPanelStore" aria-labelledby="navHeaderStore">
                         <div class="main-menu-panel__inner">
                             <div class="main-menu-panel__wrapper">
                                 <h3 class="main-menu-panel__heading"><a href="#">매장 찾기</a></h3>
@@ -262,8 +264,8 @@
                                 <dd class="side-more-info__description">1호점 특화 MD와 티바나 티, 최고의 리저브 커피를 만나보세요.</dd>
                             </dl>
                         </aside>
-                    </li> -->
-                    <!-- <li class="main-menu-panel__item" id="navPanelResponsibility" aria-labelledby="navHeaderRespontibility">
+                    </li>
+                    <li class="main-menu-panel__item" id="navPanelResponsibility" aria-labelledby="navHeaderRespontibility">
                         <div class="main-menu-panel__inner">
                             <div class="main-menu-panel__wrapper">
                                 <h3 class="main-menu-panel__heading"><a href="#">사회 공헌 캠페인 소개</a></h3>
@@ -310,8 +312,8 @@
                                 <dd class="side-more-info__description">스타벅스 커피 원두를 재활용해 보세요.</dd>
                             </dl>
                         </aside>   
-                    </li> -->
-                    <!-- <li class="main-menu-panel__item" id="navPanelRewards" aria-labelledby="navHeaderRewards">
+                    </li>
+                    <li class="main-menu-panel__item" id="navPanelRewards" aria-labelledby="navHeaderRewards">
                         <div class="main-menu-panel__inner">
                             <div class="main-menu-panel__wrapper">
                                 <h3 class="main-menu-panel__heading"><a href="#">마이 스타벅스 리워드</a></h3>
@@ -349,8 +351,8 @@
                                 <dd class="side-more-info__description">카드 등록 후 리워드 서비스를 누리고 사용내역도 조회해보세요.</dd>
                             </dl>
                         </aside>
-                    </li> -->
-                    <!-- <li class="main-menu-panel__item" id="navPanelNew" aria-labelledby="navHeaderNew">
+                    </li> 
+                     <li class="main-menu-panel__item" id="navPanelNew" aria-labelledby="navHeaderNew">
                         <div class="main-menu-panel__inner">
                             <div class="main-menu-panel__wrapper">
                                 <h3 class="main-menu-panel__heading"><a href="#">프로모션&이벤트</a></h3>
@@ -393,7 +395,7 @@
                                 <dd class="side-more-info__description">매월 업데이트되는 월페이퍼(PC/Mobile)로 스타벅스를 더욱 가깝게 즐겨보세요!</dd>
                             </dl>
                         </aside>
-                    </li> -->
+                    </li> 
                 </ul>
             </section>
         </header> 

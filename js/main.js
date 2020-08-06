@@ -1,23 +1,43 @@
-// $(function(){
-// 	$('.menu ul ul').hide(1);
-// 	$('.menu>ul>li').click(function(){
-// 		$(this).toggleClass('active');
-// 		$(this).find('ul').sildeToggle(400);
-// 	});
-// });
 $(function(){
-	$('.menu ul ul').hide(1); //2dep 안보이게 처리함.
-	$('.menu>ul>li').click(function(){
-		//클릭한 li 클래스값을 줌
-		$(this).addClass('active').siblings().removeClass('active');
-		
-		$('.menu>ul>li').each(function(){
-			//클래스값(active)이 있으면 slideDown()
-			//클래스값(active)이 없으면 slideUP()
-			if($(this).attr('class')) $(this).find('ul').slideDown(200);
-			else $(this).find('ul').slideUp(200);
-		});
-		//2dep 없으면 경고창을 띄워주세요
+	$('.main-menu-panel__item').hide(); //2dep 안보이게 처리함.
+	$('.nav__main-menu li a').on({
+		click:function(){
+			var ref=$(this).parents('li').attr('id');
+			var aria=$('.main-menu-panel__item').attr('aria-labelledby')
+
+				$("li[aria-labelledby*="+ref+"]").addClass('act').siblings().removeClass('act');
+				$("li[aria-labelledby*="+ref+"]").slideToggle(300)
+
+		},
+		mouseover:function(){
+			var ref=$(this).parents('li').attr('id');
+			var aria=$('.main-menu-panel__item').attr('aria-labelledby')
+			$("li[aria-labelledby*="+ref+"]").addClass('act').siblings().removeClass('act');
+			$("li[aria-labelledby*="+ref+"]").slideToggle(300)
+		},
+		mouseleave:function(){
+			$('.act').hide(); 	
+		},
+		blur:function(){
+			$('.act').hide(); 	
+		}	
 	});
+
+	$('.total-search__btn').click(function(){
+			// alert('검색창 열림');
+			$(this).attr('type','submit');
+			$('.total-search__btn').toggleClass('total--search__btn--act');
+			$('.total--search__btn--act').attr('type','button');
+
+			$('.total--search__btn--act').submit(function(){
+			$(this).attr('type','button');
+			})	
+	
+	
+	
+
+})
+
 });
+
 

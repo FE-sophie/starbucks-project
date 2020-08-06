@@ -130,7 +130,7 @@ a{
   /* display: block; */
 }
 .main-menu-panel__item{
-  display: none;
+  /* display: none; */
 }
 .act.main-menu-panel__item{
   display: block;

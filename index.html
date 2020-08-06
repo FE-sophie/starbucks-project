@@ -12,7 +12,7 @@
   <meta property="og:site_name" content="스타벅스">
   <meta property="og:title" content="세계 최고 넘버원 카페 브랜드, 스타벅스">
   <meta property="og:description" content="세계 유일무이 커피 브랜드 스타벅스 / Starbucks is the best coffe brand ">
-  <meta property="og:image" content="./images/favicon.png">
+  <meta property="og:image" content="./images/Starbucks_logo.svg">
   <meta property="og:url" content="https://https://www.starbucks.co.kr/">
 
   <!-- https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started.html -->
@@ -20,13 +20,13 @@
   <meta property="twitter:site" content="스타벅스">
   <meta property="twitter:title" content="세계 최고 넘버원 카페 브랜드, 스타벅스">
   <meta property="twitter:description" content="세계 유일무이 커피 브랜드 스타벅스 / Starbucks is the best coffe brand ">
-  <meta property="twitter:image" content="./images/favicon.png">
+  <meta property="twitter:image" content="./images/Starbucks_logo.svg">
   <meta property="twitter:url" content="https://https://www.starbucks.co.kr/">
 
   <!-- <link rel="shortcut icon" type='image/x-icon' href="favicon.ico"> -->
   <!-- 없어도 알아서 .ico 파일을 찾아서 쓴다 -->
-  <link rel="icon" href="./images/Starbucks_logo.svg">
-  <link rel="apple-touch-icon" href="./images/Starbucks_logo.svg">
+  <link rel="icon" href="./images/favicon.svg">
+  <link rel="apple-touch-icon" href="./images/favicon.svg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
   <link rel="stylesheet" href="./css/main.css">
     <title>스타벅스 코리아</title>
@@ -64,8 +64,9 @@
                     <form action="#" class="total-search__form">
                         <fieldset class="total-search__fieldset">
                             <legend>통합검색</legend>
-                            <input type="search" placeholder="통합검색" class="total-search__input" required>
-                            <button type="submit" class="total-search__btn total--search__btn--act">통합검색 하기</button>
+                            <label for="total-search-input" class="a11y-hidden">통합검색 입력창</label>
+                            <input type="search" placeholder="통합검색" id="total-search-input" class="total-search__input" required aria-live="polite">
+                            <button name="total-search" type="submit" class="total-search__btn total--search__btn--act">통합검색 하기</button>
                         </fieldset>
                     </form>
                 </div>
@@ -402,7 +403,33 @@
             </section>
         </header> 
         <main class="main">
-
+            <!-- 여름 프로모션 -->
+            <section class="summer-promotion" tabindex="0">
+                <div class="summer-promotion__inner">
+                    <h2 class="summer-promotion__heading a11y-hidden">써머 프로모션, 신상 음료 세 가지가 출시.</h2>
+                    <h3 class="summer-promotion__slogan">
+                        <img src="./images/20_summer3_emblem.png" alt="프로모션 슬로건 Stay chill, Stay playful" class="summer-promotion__slogan">
+                    </h3>
+                    <ul class="summer-promotion__product-list">
+                        <li class="summer-promotion__items summer-promotion__item1">
+                            <a href="#" class="summer-promotion__items-link"><span class="a11y-hidden">첫번째, 스위티 자몽 라임 블렌디드 자세히보기.</span></a>
+                            <div class="summer-promotion__item-wrapper">
+                            </div>
+                        </li>
+                        <li class="summer-promotion__items summer-promotion__item2">
+                            <a href="#" class="summer-promotion__items-link"><span class="a11y-hidden">두번째, 블론드 서머 라떼 자세히보기.</span></a>
+                            <div class="summer-promotion__item-wrapper">
+                            </div>
+                        </li>
+                        <li class="summer-promotion__items summer-promotion__item3">
+                            <a href="#" class="summer-promotion__items-link"><span class="a11y-hidden">세번째, 스위티 멜론 블론디드 자세히보기.</span></a>
+                            <div class="summer-promotion__item-wrapper">
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="#" class="summer-promotion__more"><span class="a11y-hidden">써머 프로모션 음료에 대해서</span> 자세히 보기</a>
+                </div>
+            </section>
             <!-- 공지사항 -->
             <div class="noti-pro-wrapper">
                 <section class="notice">
@@ -473,38 +500,8 @@
                 </ul>
             </section>
 
-            <!-- 여름 프로모션 -->
-            <section class="summer-promotion">
-                <div class="summer-promotion__inner">
-                    <h2 class="summer-promotion__heading a11y-hidden">써머 프로모션, 신상 음료 세 가지가 출시.</h2>
-                    <h3 class="summer-promotion__slogan">
-                        <img src="./images/20_summer3_emblem.png" alt="프로모션 슬로건 Stay chill, Stay playful" class="summer-promotion__slogan">
-                    </h3>
-                    <ul class="summer-promotion__product-list">
-                        <li class="summer-promotion__items summer-promotion__item1">
-                            <a href="#" class="summer-promotion__items-link"><span class="a11y-hidden">첫번째, 스위티 자몽 라임 블렌디드 자세히보기.</span></a>
-                            <div class="summer-promotion__item-wrapper">
-                            </div>
-                        </li>
-                        <li class="summer-promotion__items summer-promotion__item2">
-                            <a href="#" class="summer-promotion__items-link"><span class="a11y-hidden">두번째, 블론드 서머 라떼 자세히보기.</span></a>
-                            <div class="summer-promotion__item-wrapper">
-                            </div>
-                        </li>
-                        <li class="summer-promotion__items summer-promotion__item3">
-                            <a href="#" class="summer-promotion__items-link"><span class="a11y-hidden">세번째, 스위티 멜론 블론디드 자세히보기.</span></a>
-                            <div class="summer-promotion__item-wrapper">
-                            </div>
-                        </li>
-                    </ul>
-                    <a href="#" class="summer-promotion__more"><span class="a11y-hidden">써머 프로모션 음료에 대해서</span> 자세히 보기</a>
-                </div>
-            </section>
-
-            
-
             <!-- 리워드 -->
-            <section class="rewards main-section">
+            <section class="rewards main-section" tabindex="0">
                 <div class="rewards__wrapper">
                     <h2 class="reward_logo">
                         <img src="./images/reward_logo.png" alt="마이 스타벅스 리워드">
@@ -531,7 +528,7 @@
             </section>
 
             <!-- 2020 서머3 프로모션 원두 -->
-            <section class="summer-bean clearfix">
+            <section class="summer-bean clearfix" tabindex="0">
                 <h2 class="a11y-hidden">2020 서머3 프로모션 원두</h2>
                 <div class="summer-bean-wrapper">
                     <figure class="summer-bean-figure ">
@@ -543,23 +540,23 @@
                     <dd class="summer-bean-description">키 라임의 섬세한 산미로 시작하여 꿀과 같은 달콤함으로 마무리 되는</dd>
                     <dd class="summer-bean-detail">비옥한 화산 토양, 높은 고도, 풍부한 강우량으로<br> 이상적인 풍미를 자랑하는 르완다 블론드 로스트를 즐겨보세요.<br> 시럽과 같은 부드러운 바디감을 갖고 있어 아이스 커피로도 좋습니다.</dd>
                     </dl>
-                    <a href="" class=summer-bean-more>자세히 보기</a>
+                    <a href="#" class=summer-bean-more><span class="a11y-hidden">르완드 블론드 로스트에대해</span> 자세히 보기</a>
                 </div>
             </section>
 
             <!-- 신상품 -->
-            <section class="new-arrival">
+            <section class="new-arrival" tabindex="0">
                 <div class="new-arrival__inner">
                     <div class="new-arrival__wrapper">
                         <h2 class="a11y-hidden">신상품</h2>
                         <h3 class="new-arrival-product">
-                            <img src="./images/summer2_reserve_title.png" alt="자메이카 블루 마운틴">
+                            <img src="./images/summer2_reserve_title.png" alt="스타벅스 리저브 신상 원두. 자메이카 블루 마운틴">
                         </h3>
                         <ul class="new-arrival-notice">
                             <li>이미지는 연출된 것으로, 이미지 내 MD 상품은 실제 판매되지 않습니다.</li>
                             <li>해당 음료와 원두는 리저브 매장에서만 판매됩니다.</li>
                         </ul>
-                        <a href="#" class="more-btn more-btn__new-arrival">자세히 보기</a>
+                        <a href="#" class="more-btn more-btn__new-arrival"><span class="a11y-hidden">자메이카 블루 마운틴에대해</span> 자세히 보기</a>
                     </div>
                     <div class="new-arrival__bgi appear" tabindex="-1">
                         <img src="./images/summer2_reserve_bean.png" alt="">
@@ -568,7 +565,7 @@
             </section>
 
             <!-- 스타벅스 전체 상품 -->
-            <section class="all-products ">
+            <section class="all-products" tabindex="0">
                 <div class="all-products__inner-wrapper clearfix">
                     <div class="all-products__inner clearfix">
                         <h2 class="a11y-hidden">스타벅스 전체 상품</h2>
@@ -584,7 +581,7 @@
                             <span class="all-products-slogun-txt2">YOUR</span>
                             <span class="all-products-slogun-txt3">FAVORITE</span>
                         </p>
-                        <a class="all-products-more" href="">자세히보기</a>
+                        <a class="all-products-more" href="#"><span class="a11y-hidden">스타벅스 전체 상품에대해</span> 자세히보기</a>
                     </div>
                     <div class="all-products-img">
                         <img src="../images/20_summer3_fav.png" alt="음료,푸드,상품,카드 이미지">
@@ -593,7 +590,7 @@
             </section>
 
             <!-- 리저브 매거진 -->
-            <section class="magazine">
+            <section class="magazine" tabindex="0">
                 <div class="magazine__inner-wrapper clearfix">
                     <div class="magazine__inner">
                         <h2 class="magazine-heading">RESERVE MEGAZINE</h2>
@@ -605,7 +602,7 @@
             </section>
             
             <!-- 가까운 매장찾기 섹션 -->
-            <section class="locate-store">
+            <section class="locate-store" tabindex="0">
                 <div class="locate-store__inner">
                     <h2 class="a11y-hidden">가까운 매장 찾기</h2>
                     <h3 class="locate-store-heading">스타벅스를 가까이에서 경험해보세요.</h3>
@@ -624,7 +621,7 @@
             </section>
             <aside class="global-widget">
                 <a href="#" class="global-widget__link">
-                    <img src="./images/20200714_badge_pc.png" alt="홈카페 자세히보기 링크">
+                    <img src="./images/nStore_badge_pc.png" alt="홈카페 자세히보기 링크">
                 </a>
             </aside>
         </main>
@@ -741,9 +738,9 @@
                 <li class="store-item"><a href="#">신규입점 제의</a></li>
                 <li class="store-item"><a href="#">사이트 맵</a></li>
             </ul>
-            <section class="company-info">
+            <section class="company-info" >
                 <h2 class="a11y-hidden">회사 정보</h2>
-                <dl class="company-info__all">
+                <dl class="company-info__all" tabindex="0">
                     <dt class="company-info-title">사업자 등록번호<span class="aria-hidden">:</span></dt>
                     <dd class="company-info-detail">201-81-21515</dd>
                     <dt class="company-info-title">(주)스타벅스커피 코리아 대표이사<span class="aria-hidden">:</span></dt>
@@ -751,7 +748,12 @@
                     <dt class="company-info-title">개인정보 책임자<span class="aria-hidden">:</span></dt>
                     <dd class="company-info-detail">장석현</dd>
                 </dl>
-                <address class="company-info-number">tel<span class="aria-hidden">:</span>1522-3232</address>
+                <address class="company-info-number">
+                    <a href="tel:1522.3232">
+                        <span class="a11y-hidden">전화번호.일오이이,다시,삼이삼이</span>
+                        <span aria-hidden="true">TEL:1522-3232</span>
+                    </a>
+                </address>
             </section>
             <small class="copyright">&copy; 2020 Starbucks Coffe Company All Rights Reserved</small>
         </footer>

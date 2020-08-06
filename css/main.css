@@ -1,5 +1,4 @@
 @import url("https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css");
-@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800&display=swap');
 *,*::before,*::after{
   font-family: 'NanumBarunGothic', sans-serif;
   box-sizing: border-box;
@@ -223,9 +222,7 @@ a{
 }
 /* 공지사항 */
 .noti-pro-wrapper{
-  position: absolute;
   width: 100%;
-  top: 640px;
   font-size: 0;
 }
 .notice{
@@ -389,7 +386,6 @@ a{
 }
 /* 리워드 */
 .rewards{
-  margin-top: 64px;
   background: linear-gradient(90deg,#272727 49%, #d5c799 50%);
 }
 .rewards__wrapper{
@@ -996,7 +992,10 @@ a{
   right:74px;
   position:fixed;
 }
-
+.global-widget [src*='nStore']{
+  width: 141px;
+  height: 204px;
+}
 /* 푸터 */
 .footer{
   background-color: #2C2A29;

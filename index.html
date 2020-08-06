@@ -9,19 +9,19 @@
   <!-- 인터넷 익스플로어 랜더링과 관련된 코드 최신 edge로 랜더링 -->
 
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="GitHub">
-  <meta property="og:title" content="Build software better, together">
-  <meta property="og:description" content="GitHub clone coding / GitHub is where people build software. More than 31 million people use GitHub to discover, fork, and contribute to over 100 million projects.">
-  <meta property="og:image" content="img/logo__github.png">
-  <meta property="og:url" content="https://github.com">
+  <meta property="og:site_name" content="스타벅스">
+  <meta property="og:title" content="세계 최고 넘버원 카페 브랜드, 스타벅스">
+  <meta property="og:description" content="세계 유일무이 커피 브랜드 스타벅스 / Starbucks is the best coffe brand ">
+  <meta property="og:image" content="./images/favicon.png">
+  <meta property="og:url" content="https://https://www.starbucks.co.kr/">
 
   <!-- https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started.html -->
   <meta property="twitter:card" content="summary">
-  <meta property="twitter:site" content="GitHub">
-  <meta property="twitter:title" content="Build software better, together">
-  <meta property="twitter:description" content="GitHub clone coding / GitHub is where people build software. More than 31 million people use GitHub to discover, fork, and contribute to over 100 million projects.">
-  <meta property="twitter:image" content="img/logo__github.png">
-  <meta property="twitter:url" content="https://github.com">
+  <meta property="twitter:site" content="스타벅스">
+  <meta property="twitter:title" content="세계 최고 넘버원 카페 브랜드, 스타벅스">
+  <meta property="twitter:description" content="세계 유일무이 커피 브랜드 스타벅스 / Starbucks is the best coffe brand ">
+  <meta property="twitter:image" content="./images/favicon.png">
+  <meta property="twitter:url" content="https://https://www.starbucks.co.kr/">
 
   <!-- <link rel="shortcut icon" type='image/x-icon' href="favicon.ico"> -->
   <!-- 없어도 알아서 .ico 파일을 찾아서 쓴다 -->
@@ -29,11 +29,13 @@
   <link rel="apple-touch-icon" href="./images/Starbucks_logo.svg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
   <link rel="stylesheet" href="./css/main.css">
-  <script src="./js/jquery-3.4.1.min.js"></script>
-  <script src="./js/main.js"></script>
     <title>스타벅스 코리아</title>
 </head>
 <body>
+    <div id="skip-nav">
+        <a href="#globalMenu">전체 메뉴 바로가기</a>
+        <a href="#mainSection">메인 영역 바로가기</a>
+    </div>
     <div class="container">
        <header class="header">
             <div class="header__inner">
@@ -59,11 +61,11 @@
                 </ul>
                 <div class="total-search total-search--act">
                     <!-- <button class="total-search__btn total-search__btn--initial" aria-label="통합 검색 활성화 버튼"></button> -->
-                    <form action="#" class="total-search__form" get="post">
+                    <form action="#" class="total-search__form">
                         <fieldset class="total-search__fieldset">
                             <legend>통합검색</legend>
                             <input type="search" placeholder="통합검색" class="total-search__input" required>
-                            <button type="button" class="total-search__btn"></button>
+                            <button type="submit" class="total-search__btn total--search__btn--act">통합검색 하기</button>
                         </fieldset>
                     </form>
                 </div>
@@ -154,7 +156,7 @@
                             </dl>
                         </aside>
                     </li>
-                    <li class="main-menu-panel__item" id="navPanelMenu" aria-labelledby="navHeaderMenu">
+                    <!-- <li class="main-menu-panel__item" id="navPanelMenu" aria-labelledby="navHeaderMenu">
                         <div class="main-menu-panel__inner">
                             <div class="main-menu-panel__wrapper">
                                 <h3 class="main-menu-panel__heading"><a href="#">음료</a></h3>
@@ -225,8 +227,8 @@
                                 <dd class="side-more-info__description">나이트로 커피 정통의 물결치듯 흘러내리는 캐스케이딩과 부드러운 크림을 경험하세요</dd>
                             </dl>
                         </aside>
-                    </li>
-                    <li class="main-menu-panel__item" id="navPanelStore" aria-labelledby="navHeaderStore">
+                    </li> -->
+                    <!-- <li class="main-menu-panel__item" id="navPanelStore" aria-labelledby="navHeaderStore">
                         <div class="main-menu-panel__inner">
                             <div class="main-menu-panel__wrapper">
                                 <h3 class="main-menu-panel__heading"><a href="#">매장 찾기</a></h3>
@@ -264,8 +266,8 @@
                                 <dd class="side-more-info__description">1호점 특화 MD와 티바나 티, 최고의 리저브 커피를 만나보세요.</dd>
                             </dl>
                         </aside>
-                    </li>
-                    <li class="main-menu-panel__item" id="navPanelResponsibility" aria-labelledby="navHeaderRespontibility">
+                    </li> -->
+                    <!-- <li class="main-menu-panel__item" id="navPanelResponsibility" aria-labelledby="navHeaderRespontibility">
                         <div class="main-menu-panel__inner">
                             <div class="main-menu-panel__wrapper">
                                 <h3 class="main-menu-panel__heading"><a href="#">사회 공헌 캠페인 소개</a></h3>
@@ -312,8 +314,8 @@
                                 <dd class="side-more-info__description">스타벅스 커피 원두를 재활용해 보세요.</dd>
                             </dl>
                         </aside>   
-                    </li>
-                    <li class="main-menu-panel__item" id="navPanelRewards" aria-labelledby="navHeaderRewards">
+                    </li> -->
+                    <!-- <li class="main-menu-panel__item" id="navPanelRewards" aria-labelledby="navHeaderRewards">
                         <div class="main-menu-panel__inner">
                             <div class="main-menu-panel__wrapper">
                                 <h3 class="main-menu-panel__heading"><a href="#">마이 스타벅스 리워드</a></h3>
@@ -351,8 +353,8 @@
                                 <dd class="side-more-info__description">카드 등록 후 리워드 서비스를 누리고 사용내역도 조회해보세요.</dd>
                             </dl>
                         </aside>
-                    </li> 
-                     <li class="main-menu-panel__item" id="navPanelNew" aria-labelledby="navHeaderNew">
+                    </li> -->
+                    <!-- <li class="main-menu-panel__item" id="navPanelNew" aria-labelledby="navHeaderNew">
                         <div class="main-menu-panel__inner">
                             <div class="main-menu-panel__wrapper">
                                 <h3 class="main-menu-panel__heading"><a href="#">프로모션&이벤트</a></h3>
@@ -395,38 +397,11 @@
                                 <dd class="side-more-info__description">매월 업데이트되는 월페이퍼(PC/Mobile)로 스타벅스를 더욱 가깝게 즐겨보세요!</dd>
                             </dl>
                         </aside>
-                    </li> 
+                    </li> -->
                 </ul>
             </section>
         </header> 
         <main class="main">
-            <!-- 여름 프로모션 -->
-            <section class="summer-promotion" tabindex="0">
-                <div class="summer-promotion__inner">
-                    <h2 class="summer-promotion__heading a11y-hidden">써머 프로모션, 신상 음료 세 가지가 출시.</h2>
-                    <h3 class="summer-promotion__slogan">
-                        <img src="./images/20_summer3_emblem.png" alt="프로모션 슬로건 Stay chill, Stay playful" class="summer-promotion__slogan">
-                    </h3>
-                    <ul class="summer-promotion__product-list">
-                        <li class="summer-promotion__items summer-promotion__item1">
-                            <a href="#" class="summer-promotion__items-link"><span class="a11y-hidden">첫번째, 스위티 자몽 라임 블렌디드 자세히보기.</span></a>
-                            <div class="summer-promotion__item-wrapper">
-                            </div>
-                        </li>
-                        <li class="summer-promotion__items summer-promotion__item2">
-                            <a href="#" class="summer-promotion__items-link"><span class="a11y-hidden">두번째, 블론드 서머 라떼 자세히보기.</span></a>
-                            <div class="summer-promotion__item-wrapper">
-                            </div>
-                        </li>
-                        <li class="summer-promotion__items summer-promotion__item3">
-                            <a href="#" class="summer-promotion__items-link"><span class="a11y-hidden">세번째, 스위티 멜론 블론디드 자세히보기.</span></a>
-                            <div class="summer-promotion__item-wrapper">
-                            </div>
-                        </li>
-                    </ul>
-                    <a href="#" class="summer-promotion__more"><span class="a11y-hidden">써머 프로모션 음료에 대해서</span> 자세히 보기</a>
-                </div>
-            </section>
 
             <!-- 공지사항 -->
             <div class="noti-pro-wrapper">
@@ -458,19 +433,19 @@
                     <li class="promotion-panel__item">
                         <img src="https://image.istarbucks.co.kr/upload/banner/nu5js2_20200713164018239.jpg" 
                         alt="Stay chill. Stay playful. 스타벅스에서 준비한 다채로운 제상품과 함께 시원한 여름을 즐겨보세요" class="promotion-panel__img">
-                        <span class="a11y-hidden">기간 <time datetime="2020-07-14T00:00:00Z" class="promotion-panel-time">2020년 7월 14일</time> 부터 <time class="promotion-time" datetime="2020-09-07T00:00:00Z"></time>2020년 9월 7일</time> 까지</span>
+                        <span class="a11y-hidden">기간 <time datetime="2020-07-14T00:00:00Z" class="promotion-panel-time">2020년 7월 14일</time> 부터 <time class="promotion-time" datetime="2020-09-07T00:00:00Z">2020년 9월 7일</time> 까지</span>
                         <button class="promotion-panel__more">자세히보기</button>
                     </li>
                     <li class="promotion-panel__item promotion-panel__item--active">
                         <img src="https://image.istarbucks.co.kr/upload/banner/uV703j_20200603100100394.jpg" 
                         alt="자메이카 블루 마운틴, 이미지는 연출 된 것으로, 이미지 내 MD상품은 실제 판매되지 않습니다. 해당 음료와 원두는 리저브 매장에서만 판매됩니다." class="promotion__img">
-                        <span class="a11y-hidden">기간 <time datetime="2020-06-20T00:00:00Z" class="promotion-panel-time">2020년 6월 20일</time> 부터 <time class="promotion-time" datetime="2020-08-31T00:00:00Z"></time>2020년 8월 31일</time> 까지</span>
+                        <span class="a11y-hidden">기간 <time datetime="2020-06-20T00:00:00Z" class="promotion-panel-time">2020년 6월 20일</time> 부터 <time class="promotion-time" datetime="2020-08-31T00:00:00Z">2020년 8월 31일</time> 까지</span>
                         <button class="promotion-panel__more">자세히보기</button>
                     </li>
                     <li class="promotion-panel__item">
                         <img src="https://image.istarbucks.co.kr/upload/banner/uX1xA2_20191227175905000.jpg" 
                         alt="회원 계정에 등록된 스타벅스 카드로 결제 시, 1만원당 별 1개를 즉시 추가로 드립니다!" class="promotion-panel__img">
-                        <span class="a11y-hidden">기간 <time datetime="2020-01-01T00:00:00Z" class="promotion-panel-time">2020년 1월 1일 수요일</time> 부터 <time class="promotion-time" datetime="2020-12-31T00:00:00Z"></time>2020년 12월 31일 목요일</time> 까지</span>
+                        <span class="a11y-hidden">기간 <time datetime="2020-01-01T00:00:00Z" class="promotion-panel-time">2020년 1월 1일 수요일</time> 부터 <time class="promotion-time" datetime="2020-12-31T00:00:00Z">2020년 12월 31일 목요일</time> 까지</span>
                         <button class="promotion-panel__more">자세히보기</button>
                     </li>
                 </ul>
@@ -497,6 +472,36 @@
                     </li>
                 </ul>
             </section>
+
+            <!-- 여름 프로모션 -->
+            <section class="summer-promotion">
+                <div class="summer-promotion__inner">
+                    <h2 class="summer-promotion__heading a11y-hidden">써머 프로모션, 신상 음료 세 가지가 출시.</h2>
+                    <h3 class="summer-promotion__slogan">
+                        <img src="./images/20_summer3_emblem.png" alt="프로모션 슬로건 Stay chill, Stay playful" class="summer-promotion__slogan">
+                    </h3>
+                    <ul class="summer-promotion__product-list">
+                        <li class="summer-promotion__items summer-promotion__item1">
+                            <a href="#" class="summer-promotion__items-link"><span class="a11y-hidden">첫번째, 스위티 자몽 라임 블렌디드 자세히보기.</span></a>
+                            <div class="summer-promotion__item-wrapper">
+                            </div>
+                        </li>
+                        <li class="summer-promotion__items summer-promotion__item2">
+                            <a href="#" class="summer-promotion__items-link"><span class="a11y-hidden">두번째, 블론드 서머 라떼 자세히보기.</span></a>
+                            <div class="summer-promotion__item-wrapper">
+                            </div>
+                        </li>
+                        <li class="summer-promotion__items summer-promotion__item3">
+                            <a href="#" class="summer-promotion__items-link"><span class="a11y-hidden">세번째, 스위티 멜론 블론디드 자세히보기.</span></a>
+                            <div class="summer-promotion__item-wrapper">
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="#" class="summer-promotion__more"><span class="a11y-hidden">써머 프로모션 음료에 대해서</span> 자세히 보기</a>
+                </div>
+            </section>
+
+            
 
             <!-- 리워드 -->
             <section class="rewards main-section">
@@ -544,19 +549,21 @@
 
             <!-- 신상품 -->
             <section class="new-arrival">
-                <div class="new-arrival__wrapper">
-                    <h2 class="a11y-hidden">신상품</h2>
-                    <h3 class="new-arrival-product">
-                        <img src="./images/summer2_reserve_title.png" alt="자메이카 블루 마운틴">
-                    </h3>
-                    <ul class="new-arrival-notice">
-                        <li>이미지는 연출된 것으로, 이미지 내 MD 상품은 실제 판매되지 않습니다.</li>
-                        <li>해당 음료와 원두는 리저브 매장에서만 판매됩니다.</li>
-                    </ul>
-                    <a href="#" class="more-btn more-btn__new-arrival">자세히 보기</a>
-                </div>
-                <div class="new-arrival__bgi appear" tabindex="-1">
-                    <img src="./images/summer2_reserve_bean.png" alt="">
+                <div class="new-arrival__inner">
+                    <div class="new-arrival__wrapper">
+                        <h2 class="a11y-hidden">신상품</h2>
+                        <h3 class="new-arrival-product">
+                            <img src="./images/summer2_reserve_title.png" alt="자메이카 블루 마운틴">
+                        </h3>
+                        <ul class="new-arrival-notice">
+                            <li>이미지는 연출된 것으로, 이미지 내 MD 상품은 실제 판매되지 않습니다.</li>
+                            <li>해당 음료와 원두는 리저브 매장에서만 판매됩니다.</li>
+                        </ul>
+                        <a href="#" class="more-btn more-btn__new-arrival">자세히 보기</a>
+                    </div>
+                    <div class="new-arrival__bgi appear" tabindex="-1">
+                        <img src="./images/summer2_reserve_bean.png" alt="">
+                    </div>
                 </div>
             </section>
 
@@ -756,4 +763,3 @@
 <script src="js/script.js"></script>
 </body>
 </html>
-

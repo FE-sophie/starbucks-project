@@ -1,8 +1,12 @@
 @import url("https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css");
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800&display=swap');
 *,*::before,*::after{
-  font-family: 'Maven Pro', sans-serif;
+  font-family: 'NanumBarunGothic', sans-serif;
   box-sizing: border-box;
+  
+}
+*:focus{
+  outline: 2px solid #00b050;
 }
 html{
   font-size: 10px;
@@ -26,6 +30,24 @@ a{
   content: '';
   display: block;
   clear: both;
+}
+/* 스킵네비 */
+#skip-nav a{
+  position:absolute;
+  top:0px;
+  left:0;
+  width:100%;
+  background-color: #00B050;
+  color:#fff;
+  z-index:0;
+  font-size:1.5rem;
+  padding:5px 0;
+  text-align:center;
+  text-decoration: none;
+}
+#skip-nav a:active, #skip-nav a:focus{
+  top:0;
+  z-index:10000;
 }
 /* 해더 */
 .container{
@@ -72,9 +94,13 @@ a{
   padding: 10px 5px;
 }
 .member-links__item:not(:last-child)::after{
-  content: 'ㅣ';
-  opacity: 0.3;
-  font-size: 1.3rem;
+  content: '';
+  display: inline-block;
+  background-color: #eae9e7;
+  width: 1px;
+  height: 1.5rem;
+  margin: 10px;
+  vertical-align: top;
 }
 /* 통합검색 */
 .total-search{
@@ -92,6 +118,9 @@ a{
   cursor: pointer;
   width: 34px;
   height: 34px;
+  white-space: nowrap;
+  text-indent: 9999px;
+  overflow: hidden;
 }
 .total-search__input{
   margin-top: 5px;
@@ -107,7 +136,7 @@ a{
   /* background-color: brown; */
   font-size: 0;
 }
-.nav__main-item:hover a{
+.nav__main-item:hover a,.nav__main-item a:focus{
   background-color: #2c2a29;
   color: #669900;
   text-decoration: underline;
@@ -127,7 +156,7 @@ a{
 /* 메인메뉴 패널 */
 .main-menu-panel{
   width: 100%;
-  display: block;
+  /* display: block; */
 }
 .main-menu-panel__item{
   display: none;
@@ -189,9 +218,14 @@ a{
   margin-bottom: 20px;
 }
 /* 메인 */
+.main{
+  position: relative;
+}
 /* 공지사항 */
 .noti-pro-wrapper{
+  position: absolute;
   width: 100%;
+  top: 640px;
   font-size: 0;
 }
 .notice{
@@ -202,7 +236,6 @@ a{
   padding: 0 13px;
   color: #fff;
   text-align: right;
-  margin-right: -4px;
 }
 .notice-heading{
   display: inline-block;
@@ -301,9 +334,6 @@ a{
   margin-bottom:5px;
   cursor: pointer;
 }
-.promotion-panel__more:hover{
-
-}
 .promotion-panel__prev,.promotion-panel__next{
   text-indent: -9999px;
   position:absolute;
@@ -359,6 +389,7 @@ a{
 }
 /* 리워드 */
 .rewards{
+  margin-top: 64px;
   background: linear-gradient(90deg,#272727 49%, #d5c799 50%);
 }
 .rewards__wrapper{
@@ -413,8 +444,8 @@ a{
   vertical-align: top;
   width: 251px;
 }
-.reward-btn:hover, .more-btn:hover, .reward-btn:focus, 
-.promotion-panel__more:hover{
+.reward-btn:hover, .more-btn:hover, .more-btn:focus, .reward-btn:focus, 
+.promotion-panel__more:hover, .promotion-panel__more:focus{
   color: #fff;  
   background-color: #000;
   text-decoration: underline;
@@ -498,7 +529,7 @@ a{
   animation: movemove 1.5s ease-in-out normal forwards;
   transition: all 800ms;
 }
-.summer-bean-more:hover {
+.summer-bean-more:hover, .summer-bean-more:focus {
   background-color: #fff;
   color: #000;
   text-decoration: underline;
@@ -509,6 +540,11 @@ a{
   background-color: #c3d2d9;
   position: relative;
   overflow: hidden;
+}
+.new-arrival__inner{
+  position: relative;
+  width: 1500px;
+  margin: auto;
 }
 .new-arrival__wrapper{
   padding-top: 70px;
@@ -539,18 +575,10 @@ a{
   top: 270px;
   left: 180px;
 }
-/* @keyframes new-arrival--opacity{
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
-} */
 .new-arrival__bgi{
   position: absolute;
   bottom: 0;
-  left:700px;
+  left:650px;
   opacity: 0;
   animation: new-arrival--opacity 2s ease-in-out forwards;
 }
@@ -628,7 +656,7 @@ a{
   animation:recommendAni2 1s;
   transition: background-color 1s,text-decoration 100s;
 }
-.all-products-more:hover{
+.all-products-more:hover, .all-products-more:focus{
   background-color: #fff;
   text-decoration: underline;
   color:#555;
@@ -643,11 +671,6 @@ a{
 }
 .all-products-img img{
   max-width: 50%;
-<<<<<<< HEAD
-=======
-  
- 
->>>>>>> bb893100db60896a44608be25826281fed3433a4
 }
 /* 매거진 */
 .magazine{
@@ -690,7 +713,6 @@ a{
 }
 .magazine-img{
   max-width: 100%;
-  
 }
 .magazine__inner{
   float:right;
@@ -715,10 +737,6 @@ a{
   padding:20px 0;
   color:#555;
   margin-top:-2px 
-<<<<<<< HEAD
-=======
-  
->>>>>>> bb893100db60896a44608be25826281fed3433a4
   }
 .magazine-more{
   margin-top:35px;
@@ -781,8 +799,6 @@ a{
 }
 .summer-promotion__heading{
   position: absolute;
-}
-.summer-promotion__product-list{
 }
 .summer-promotion__items{
   position: absolute;
@@ -858,7 +874,7 @@ a{
   border-radius: 3px;
   animation: showupAni 1s ease-in-out 4s 1 backwards;
 }
-.summer-promotion__more:hover{
+.summer-promotion__more:hover, .summer-promotion__more:focus{
   background-color: #00B050;
   text-decoration: underline;
   color:#fff;
@@ -967,7 +983,7 @@ a{
   transition-duration: 0.2s, 0.4s, 0.4s;
   animation: moveAni 2.5s ease-out 150ms 1 forwards;
 }
-.locate-store-search:hover{
+.locate-store-search:hover, .locate-store-search:focus{
   background-color: #222;
   text-decoration: underline;
   color:#fff;
@@ -1052,10 +1068,13 @@ a{
   text-decoration: underline;
 }
 .policy__item:not(:last-child)::after{
-  content: 'ㅣ';
-  color: #393939; 
+  content: '';
+  display: inline-block;
+  background-color: #333232;
+  width: 1px;
+  height: 1.5em;
   margin: 10px;
-  text-decoration: none;
+  vertical-align: middle;
 }
 .store-item {
   display: inline-block;

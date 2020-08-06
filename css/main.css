@@ -127,10 +127,10 @@ a{
 /* 메인메뉴 패널 */
 .main-menu-panel{
   width: 100%;
-  /* display: block; */
+  display: block;
 }
 .main-menu-panel__item{
-  /* display: none; */
+  display: none;
 }
 .act.main-menu-panel__item{
   display: block;

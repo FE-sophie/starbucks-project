@@ -11,17 +11,24 @@ $(function(){
 		},
 		mouseover:function(){
 			var ref=$(this).parents('li').attr('id');
-			var aria=$('.main-menu-panel__item').attr('aria-labelledby')
+			// var aria=$('.main-menu-panel__item').attr('aria-labelledby')
 			$("li[aria-labelledby*="+ref+"]").addClass('act').siblings().removeClass('act');
-			$("li[aria-labelledby*="+ref+"]").slideToggle(300)
+			$("li[aria-labelledby*="+ref+"]").slideDown(300);
 		},
+			// $('.main-menu-panel__list>li').mouseleave(function(){
+			// 	$(this).slideUp(300)
+			// })
+		//},
 		mouseleave:function(){
-			$('.act').hide(); 	
+			$('.act').slideUp(300);
 		},
 		blur:function(){
-			$('.act').hide(); 	
-		}	
+			$('.act').slideUp(300); 	
+		}
 	});
+		
+		})	
+	
 
 	$('.total-search__btn').click(function(){
 			// alert('검색창 열림');

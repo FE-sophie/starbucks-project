@@ -121,11 +121,18 @@ a{
   text-indent: 9999px;
   overflow: hidden;
 }
+.total-search__fieldset{
+  position: relative;
+
+
+}
 .total-search__input{
   margin-top: 5px;
   padding: 4px 4px 4px 10px;
   width: 143px;
   border: none;
+  /* left:0; */
+  /* top:0 */
 }
 .total-search__input::placeholder{
   font-size: 1.2rem;  
